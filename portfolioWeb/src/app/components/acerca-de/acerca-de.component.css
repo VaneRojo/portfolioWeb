@@ -43,4 +43,13 @@
     }
 
 }
+.nomTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
 
+.row{
+    margin-top: 2rem;
+}
