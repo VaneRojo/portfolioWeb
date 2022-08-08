@@ -23,32 +23,169 @@
 
 
 .img-perfil{
-    position: absolute;
+    /* position: absolute; */
+
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 200px;
+    position: static;
+    display: flex;
+    width: 30%;
+    margin-top: 10em;
 
-    top: 17em;
-    left: 2em;
+
+
+    /* width: 200px; */
+
+    /* top: 17em; */
+    /* left: 5em; */
     /* height: 200px; */
 }
 
 
+.container{
 
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/img/banner3.jpg');
+    background-size: cover;
+    background-size: 100% 74%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* @media (min-width: 576px){
+
+    .img-perfil{
+
+        width: 48%;
+        align-self: center;
+        margin-top: 10em;
+    }
+
+} */
+
+@media (min-width: 576px){
+    .img-perfil{
+        margin-inline-end: auto;
+        margin-left: 2em;
+    }
+
+}
 
 @media (max-width: 576px){
 
     .img-perfil{
 
-        width: 50%;
+        margin-left: 0em;
 
-        left: 9.5em;
-        top: 12rem;
-
+        width: 48%;
+        align-self: center;
+        margin-top: 10em;
     }
 
 }
-@media (max-width: 460px){
+@media (max-width: 500px){
+
+    .img-perfil{
+
+        width: 50%;
+        align-self: center;
+        margin-top: 10em;
+    }
+
+}
+
+
+@media (max-width: 400px){
+
+    .img-perfil{
+
+        width: 65%;
+        align-self: center;
+        margin-top: 10em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 1300px){
+
+    .img-perfil{
+
+        left: 8em;
+
+    }
+
+    @media (max-width: 1065px){
+
+        .img-perfil{
+
+            left: 8em;
+
+        }
+
+    }
+}
+@media (max-width: 576px){
+
+    .container{
+        /* background: yellow; */
+        /* height: 250px; */
+        /*IMPORTANTE*/
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../assets/img/banner3.jpg');
+        background-size: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    .banner{
+
+        height: 250px;
+    }
+
+    .img-perfil{ */
+        /* width: 50%; */
+        /* text-align: center; */
+        /* align-self: center;
+        position: static;
+        display: flex;
+        margin-top: 11em;
+        width: 38%;
+    }
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 460px){
 
     .banner{
 
@@ -87,4 +224,4 @@
         left: 5.9em;
         width: 50%;
     }
-}
+} */

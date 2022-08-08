@@ -2,22 +2,18 @@
     margin-bottom: 20px;
     margin-top:-18%;
 } */
-.img-perfil{
-    border-radius: 50%;
-
-}
 
 .card{
     text-align: center;
     vertical-align: middle;
 }
 
-#nombre{
+.nombre{
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-#titulo{
+.titulo{
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -27,29 +23,34 @@
     background-color: rgba(255, 255, 255, 0.358);
 }
 
-@media (min-width: 576px){
-    .img-perfil-container{
-        margin-bottom: 0px;
-        margin-top: 0%;
-        top: 50px;
-    }
 
-    .img-perfil{
-        position: absolute;
-        border-radius: 50%;
-        box-shadow: 3px 3px 3px lightgrey;
-        width: 200px;
-        height: 200px;
-    }
-
-}
 .nomTitulo{
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
 }
 
 .row{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+@media (min-width: 356px){
+
+
+	.row{
+		margin-top: 0.5rem;
+	}
+
+}
+@media (max-width: 355px){
+
+
+	.row{
+		margin-top: 0.5rem;
+	}
+
 }
