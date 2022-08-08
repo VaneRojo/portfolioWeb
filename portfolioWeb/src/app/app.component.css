@@ -24,25 +24,9 @@
 
 
 .content{
-    margin: 0px auto 32px;
+    margin: 15px auto 32px;
 }
 
 
 
 
-@media (min-width: 356px){
-
-
-	/* .content{
-		margin: 18px auto 32px;
-	} */
-
-}
-
-
-@media (max-width: 355px){
-
-
-
-
-}
