@@ -1,0 +1,38 @@
+.row-principal{
+    --bs-gutter-x: -1.5rem;
+    /* background-image: url(../../../assets/img/experiencia-laboral.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: inherit;
+    /* margin-top: 4em; */
+    border-radius: 3em;
+    padding: 2em;
+}
+.row{
+    /* text-align: center; */
+    background-color: #dda6f629;
+    /* background-color: #dca6f632; */
+
+}
+h2, h3{
+    display: inline;
+}
+
+.card{
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.358);
+    border-radius: 3em;
+}
+
+.card-header{
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+
+.experiencia{
+
+    text-align: right;
+
+    /* background-size: 100% 50%; */
+}

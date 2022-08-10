@@ -1,3 +1,22 @@
+
+
+
+/* app-experiencia{
+
+    /* width: 100%;
+
+} */
+
+
+.row{
+    /* text-align: center; */
+    background-color: #dda6f629;
+    /* background-color: #dca6f632; */
+
+}
+
+
+
 :root{
     --primary:#F24109;
     --secondary:#1D243E;
@@ -17,6 +36,8 @@
 
 html{
     font-family: var(--font) !important;
+    /* background-color: #ef61e3; */
+
 }
 
 .contenedor{
@@ -62,7 +83,7 @@ a{
     position:relative;
     left:5rem;
   }
-  
+
 .h2-lines::after,.h2-lines::before{
     content:"";
     position:absolute;
@@ -72,10 +93,10 @@ a{
     top:1.3rem;
   }
 .h2-lines::before{
-    left: -5rem;   
+    left: -5rem;
   }
 .h2-lines::after{
-    right: -5rem;   
+    right: -5rem;
   }
 
 /* Header */
@@ -119,7 +140,7 @@ a{
     position:relative;
     left:6rem;
   }
-  
+
 .icon-lines::after,.icon-lines::before{
     content:"";
     position:absolute;
@@ -129,10 +150,10 @@ a{
     top:0.8rem;
   }
 .icon-lines::before{
-    left: -5.5rem;   
+    left: -5.5rem;
   }
 .icon-lines::after{
-    left: 4.1rem;   
+    left: 4.1rem;
   }
 /*Skills*/
 .sk-img{
@@ -143,8 +164,8 @@ a{
 
 /*Education*/
 .edu-img{
-    max-width: 7rem; 
-    height: auto; 
+    max-width: 7rem;
+    height: auto;
     position: relative;
     margin: 1rem auto;
 }
