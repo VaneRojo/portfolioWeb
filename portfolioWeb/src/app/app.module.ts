@@ -10,6 +10,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { SeparadorComponent } from './components/separador/separador.component';
+import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SeparadorComponent } from './components/separador/separador.component';
     AcercaDeComponent,
     BannerComponent,
     ExperienciaComponent,
-    SeparadorComponent
+    SeparadorComponent,
+    EncabezadoComponent
   ],
   imports: [
     BrowserModule,

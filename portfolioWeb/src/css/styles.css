@@ -1,3 +1,8 @@
+body{
+    background-color: black;
+}
+
+
 /* You can add global styles to this file, and also import other style files */
 :root{
     --primary:#F24109;
@@ -19,20 +24,16 @@
 html{
     font-family: var(--font) !important;
 }
-.background{
+body{
     /* text-align: center; */
-    /* background-color: #dda6f629; */
+    background-color: #dda6f629;
     /* background-color: #dca6f632; */
-    /* background-color: white; */
-    background: rgb(212,171,255);
-    background: linear-gradient(0deg, rgba(212,171,255,0.482110031512605) 17%, rgba(255,255,255,0.35886073179271705) 50%, rgba(212,171,255,0.8266478466386554) 81%);
-}
-.background-transparent{
-    /* text-align: center; */
-    /* background-color: #dda6f629; */
-    /* background-color: #dca6f632; */
-    background-color: transparent;
 
+}
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 120rem !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a{

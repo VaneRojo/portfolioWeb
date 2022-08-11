@@ -37,7 +37,12 @@
     margin-top: 10em;
     z-index: 2;
 }
+.row{
+    /* text-align: center; */
+    /* background-color: #dda6f629; */
+    /* background-color: #dca6f632; */
 
+}
 .banner{
     /* position: sticky; */
     display: flex;
@@ -115,7 +120,7 @@
 @media (min-width: 576px) and (max-width: 1200px) {
     .img-perfil{
 
-        margin-left: 8%;
+        margin-left: 5%;
     }
 
 }
