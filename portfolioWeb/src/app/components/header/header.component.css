@@ -53,7 +53,7 @@ background: linear-gradient(318deg, rgba(238,174,202,0.9248074229691877) 0%, rgb
 
 }
 .row {
-   --bs-gutter-x: -1.5rem;
+   --bs-gutter-x: 0;
 }
 
   .spacer {
