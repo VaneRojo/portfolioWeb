@@ -9,12 +9,7 @@
     border-radius: 3em;
     padding: 2em;
 }
-.row{
-    /* text-align: center; */
-    /* background-color: #dda6f629; */
-    /* background-color: #dca6f632; */
 
-}
 
 h2, h3{
     display: inline;
@@ -32,11 +27,6 @@ h2, h3{
     border-top-right-radius: 3em;
 }
 
-.experiencia{
-
-
-    /* background-size: 100% 50%; */
-}
 
 .descripcion{
     /* display: flex;*/
