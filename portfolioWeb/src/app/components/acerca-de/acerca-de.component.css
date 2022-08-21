@@ -1,28 +1,4 @@
-/* .img-perfil-container{
-    margin-bottom: 20px;
-    margin-top:-18%;
-} */
 
-/* .row-principal{
-    --bs-gutter-x: -1.5rem;
-    background-image: url(../../../assets/img/About-Me.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: inherit;
-    margin-top: 1em;
-    border-radius: 3em;
-}
-.card{
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(255, 255, 255, 0.358);
-    border-radius: 3em;
-}
-
-.card-header{
-    border-top-left-radius: 3em;
-    border-top-right-radius: 3em;
-} */
 
 .card{
     text-align: center;
@@ -46,19 +22,43 @@
 
 
 .descripcion{
-    /* display: flex;*/
-    /* flex-direction: column; */
+   
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.779);
     box-shadow: 9px 9px 10px rgb(0 0 0 / 30%);
-    border-radius: 5%;
-        /* max-width: 270px; */
-    /* height: 267px; */
+    border-radius: 2em;
     padding: 3%;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-bottom: 5%;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 0.7em;
+    /* margin-bottom: 5%; */
+}
+.img-acercaDe{
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
+}
+
+.acercaDe{
+    margin-top: -54px;
+}
+
+@media (min-width: 576px) and (max-width: 1000px) {
+    .descripcion{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .acercaDe{
+        margin-top: 0em;
+    }
+}
+@media (max-width: 576px){
+
+    .acercaDe{
+        margin-top: 0;
+    }
+
 }
 
 .row{
@@ -80,6 +80,7 @@
 
 .info-contacto{
     font-size: 1em;
+    width: 100%;
 }
 
 

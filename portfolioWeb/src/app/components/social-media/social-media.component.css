@@ -1,10 +1,12 @@
 a{
-    padding: 5px;
+    /* padding: 5px; */
+    margin: 0 6px 0 6px;
+
 }
 
 .redSocial {
     /* height: 40px; */
-    margin: 0 5px;
+    /* margin: 0 5px; */
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 
 }
@@ -17,19 +19,28 @@ a{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
    */
 
-    border-radius: 21%;
+    /* border-radius: 21%;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-    -webkit-background-clip: text ;
+    -webkit-background-clip: text ; */
           /* Also define standard property for compatibility */
-    background-clip: text;
+    /* background-clip: text;
     -webkit-text-fill-color: transparent;
     transform-box: view-box;
     transform: rotate(360deg);
     animation: rainbow 5s ease-in-out infinite;
-
+    color: white;
+     */
 
   /* font-size: 200px; */
    /* change this to change the size*/
+
+
+
+
+   color: white;
+    /* padding: 0px; */
+    padding-right: 0px;
+    margin: 0.7px 3px -0.7px 3px;
 }
 
 .redSocial:hover{
@@ -45,3 +56,43 @@ a{
     background-color: blanchedalmond;
 
 }
+
+.github{
+    background: white;
+    border-radius: 7em;
+    color: black;
+}
+
+.sing-in{
+    /* margin-top: -1em; */
+    /* padding: 3px 10px; */
+    /* background: rgb(142, 43, 167); */
+    background: rgb(49 189 58);
+    
+    /* margin-right: 5px; */
+    color: rgb(254, 253, 255);
+    border-radius: 7em;
+    padding: 0 0px 0px 5px;
+}
+
+.instagram-background{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    /* width: 60px; */
+    /* height: 60%; */
+    /* background-size: 60px 60px; */
+    /* text-align: center; */
+    /* justify-content: center; */
+    border-radius: 0.7em;
+    display: inline-table;
+    padding-left: 0.1px;
+    padding-right: inherit;
+    padding-top: 0.7px;
+    padding-bottom: 0.7px;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+

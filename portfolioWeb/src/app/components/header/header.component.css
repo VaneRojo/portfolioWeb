@@ -46,15 +46,8 @@ background: linear-gradient(318deg, rgba(238,174,202,0.9248074229691877) 0%, rgb
     color: white;
     font-weight: 600;
   }
-  .row{
-    /* text-align: center; */
-    /* background-color: #dda6f629; */
-    /* background-color: #dca6f632; */
 
-}
-.row {
-   --bs-gutter-x: 0;
-}
+
 
   .spacer {
     flex: 1;

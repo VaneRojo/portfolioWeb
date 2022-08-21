@@ -1,24 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
-    --primary:#F24109;
-    --secondary:#1D243E;
-    --secondary-85:rgba(29,36,62,0.85);
-    --white:#fff;
-    --light-grey:#f3f3f3;
-    --grey:#ccc;
-    --dark-grey:#666;
-    --dark2-grey:#333;
-    --dark3-grey:#222;
-    --black:#000;
-    --white-50:rgba(255,255,255,0.5);
-    --black-50:rgba(0,0,0,0.5);
 
-    --font:'Nunito', sans-serif;
-}
-
-html{
-    font-family: var(--font) !important;
-}
 .background{
     /* text-align: center; */
     /* background-color: #dda6f629; */
@@ -27,6 +8,13 @@ html{
     background: rgb(212,171,255);
     background: linear-gradient(0deg, rgba(212,171,255,0.482110031512605) 17%, rgba(255,255,255,0.35886073179271705) 50%, rgba(212,171,255,0.8266478466386554) 81%);
 }
+
+
+
+html{
+    font-family: var(--font) !important;
+}
+
 .background-transparent{
     /* text-align: center; */
     /* background-color: #dda6f629; */
@@ -44,58 +32,16 @@ h1, h2, h3{
 h4, h5, h6, p, a{
     font-weight: 400 !important;
 }
-a{
-    color: var(--secondary);
-}
-.btn {
-    color: var(--white) !important;
-    background-color: var(--primary) !important;
-}
-.btn:hover {
-    background-color: var(--grey) !important;
-    color: var(--dark3-grey) !important;
-}
-.fa-solid{
-    color: var(--primary);
-}
 
-.background-grey{
-    background-color: var(--light-grey);
-}
-
-/* ******* Styles ******* */
+/* h1{
+    
+    background: #d97bf21f;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: -14px 22px 11px -11px #999;
+    
+} */
 
 
 
-/*Skills*/
-.sk-img{
-    max-width: 5rem;
-    display: block;
-    margin: 0px auto;
-}
 
-/*Education*/
-.edu-img{
-    max-width: 7rem;
-    height: auto;
-    position: relative;
-    margin: 1rem auto;
-}
-
-/*Projects*/
-.card-height1{
-    height: 95%;
-}
-
-/*Contact*/
-.contact-img{
-    margin: 1rem auto 0 auto;
-}
-.card-height{
-    height: 95%;
-}
-
-/*Footer*/
-.footer{
-    background-color: var(--secondary);
-}
