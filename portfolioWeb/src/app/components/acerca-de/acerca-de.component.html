@@ -4,12 +4,12 @@
     <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-perfil-container"> -->
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
       <div class="card descripcion">
-        <p id="nombre" class="nombre">Rojo, Vanesa Soledad</p>
-        <p id="titulo" class="titulo">Full Stack Developer Jr.</p>
+        <p id="nombre" class="nombre">{{persona.apellido}}, {{persona.nombre}} </p>
+        <p id="titulo" class="titulo"> {{persona.titulo}} </p>
         <div class="info-contacto">
-          <p id="cel" class="">Cel.: 15-6545-0278</p>
-          <p id="mail" class="">Mail: vanerojo1993@gmail.com</p>
-          <p id="edad" class="">Edad: 29 años</p>
+          <p id="cel" class="">Cel.: {{persona.telefono}}</p>
+          <p id="mail" class="">Mail: {{persona.mail}}</p>
+          <p id="edad" class="">Edad: {{persona.edad}} años</p>
         </div>
       </div>
     </div>
