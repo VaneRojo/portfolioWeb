@@ -36,7 +36,7 @@
   
               <!-- Password input -->
               <div class="form-outline sm-4 mb-4">
-                <input type="password" id="form2Example2" class="form-control" placeholder="Contraseña"/>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" [(ngModel)]="password" required />
                 <!-- <label class="form-label" for="form2Example2">Password</label> -->
               </div>
   
@@ -50,14 +50,14 @@
                   </div>
                 </div>
   
-                <div class="col">
-                  <!-- Simple link -->
+                <!-- Simple link -->
+                <!-- <div class="col">
                   <a href="#!">Forgot password?</a>
-                </div>
+                </div> -->
               </div>
   
               <!-- Submit button -->
-              <button type="button" class="btn btn-primary btn-block sm-4 mb-4">Sign in</button>
+              <button type="button" class="btn btn-primary btn-block sm-4 mb-4">Iniciar Sesión</button>
   
             </form>
   
