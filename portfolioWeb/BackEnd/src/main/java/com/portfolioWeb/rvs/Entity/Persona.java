@@ -30,7 +30,7 @@ public class Persona {
     
     @NotNull
     /*@Size(min = 11, max = 11, message = "El teléfono debe contener 11 caracteres")*/
-    private int telefono;
+    private String telefono;
     
     @NotNull
     /**@Size(min = 11, max = 11, message = "El teléfono debe contener 11 caracteres")*/
@@ -40,11 +40,18 @@ public class Persona {
     /*@Size(min = 1, max = 50)*/
     private String img_perfil;
     
+
     @NotNull
     /*@Size(min = 1, max = 50)*/
     private String img_banner;
-
     
+    
+    @NotNull
+    /*@Size(min = 1, max = 50)*/
+    private int edad;
    
+    @NotNull
+    /*@Size(min = 1, max = 50)*/
+    private String titulo;
     
 }
