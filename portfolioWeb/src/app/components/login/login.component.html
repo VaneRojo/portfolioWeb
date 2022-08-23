@@ -27,10 +27,10 @@
         <div class="col-sm-8 col-lg-8 form">
           <div class="card-body py-5 px-sm-5 px-md-5 form">
   
-            <form>
+            <form #f="ngForm"(ngSubmit)="onLogin()" novalidate>
               <!-- Email input -->
               <div class="form-outline sm-4 mb-4">
-                <input type="email" id="form2Example1" class="form-control" placeholder="E-mail"/>
+                <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" placeholder="Usuario" [(ngModel)]="nombreUsuario" required />
                 <!-- <label class="form-label" for="form2Example1">Email address</label> -->
               </div>
   
