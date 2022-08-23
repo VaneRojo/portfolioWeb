@@ -1,0 +1,55 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+
+    /* background-color: violet; */
+    background: linear-gradient(182deg, rgba(255,52,255,0.703519) 8%, rgba(255,255,255,1.316964) 32%, rgba(211,177,234,2.316964) 42%, rgba(255,255,255,0.055639) , rgba(0,0,0,0) 66%);
+
+    /* background: rgb(255,255,255);
+    background: linear-gradient(195deg, rgba(255,255,255,-0.296481) 5%, rgba(278,235,436,1.316964) 25%, rgba(206,173,234,1.316964) 37%, rgba(0,0,0,0) 100%); */
+
+/* linear-gradient(195deg, rgba(255,255,255,-0.296481) 7%, rgba(302,246,250,1.316964) 17%, rgba(117,116,116,0) 32%, rgba(0,0,0,0) 100%); */
+
+/* background: linear-gradient(339deg, rgba(255,255,255,0.7035189075630253) 0%, rgba(196,195,195,0.3169642857142857) 30%, rgba(117,116,116,0) 52%, rgba(0,0,0,0) 100%); */
+/* background: rgb(100,29,253);
+background: linear-gradient(74deg, rgba(100,29,253,0.7175245098039216) 1%, rgba(255,255,255,0.9) 59%, rgba(255,255,255,0.05563944327731096) 85%, rgba(255,255,255,0.20129770658263302) 97%); */
+
+    /* background: rgb(255,255,255);
+background: linear-gradient(331deg, rgba(255,255,255,0.7035189075630253) 0%, rgba(196,195,195,0.3169642857142857) 38%, rgba(117,116,116,0) 63%, rgba(0,0,0,0) 100%); */
+
+    /* background: rgb(255,255,255);
+    background: linear-gradient(331deg, rgba(255,255,255,0.8379726890756303) 0%, rgba(196,195,195,0.43461134453781514) 49%, rgba(0,0,0,0.639093137254902) 100%); */
+
+    /* background: rgba(255, 255, 255, 0);
+    background: linear-gradient(331deg, rgba(255,255,255,0.8379726890756303) 0%, rgba(196,195,195,0.43461134453781514) 49%, rgba(153,152,152,0.8715861344537815) 100%); */
+
+
+    /* background: rgb(238,174,202);
+    background: linear-gradient(318deg, rgba(238,174,202,0.2413340336134454) 39%, rgba(148,187,233,0.8939950980392157) 100%); */
+
+    /* background-color: revert;
+     */
+
+
+
+     /* background: rgb(238,174,202);
+background: linear-gradient(318deg, rgba(238,174,202,0.4542191876750701) 36%, rgba(148,187,233,1) 100%); */
+     /* background: rgb(238,174,202);
+background: linear-gradient(318deg, rgba(238,174,202,0.9248074229691877) 0%, rgba(148,187,233,1) 100%); */
+    color: white;
+    font-weight: 600;
+  }
+
+
+
+  .spacer {
+    flex: 1;
+  }
+

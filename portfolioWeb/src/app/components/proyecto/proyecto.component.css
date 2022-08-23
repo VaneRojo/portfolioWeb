@@ -1,0 +1,146 @@
+
+.row-principal{
+    --bs-gutter-x: -1.5rem;
+    /* background-image: url(../../../assets/img/experiencia-laboral.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: inherit;
+    /* margin-top: 4em; */
+    border-radius: 3em;
+    padding: 2em;
+}
+
+
+h2, h3{
+    display: inline;
+}
+
+.card{
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: rgba(255, 255, 255, 0.358); */
+    /* border-radius: 3em; */
+}
+
+.card-header{
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+
+
+
+.descripcion{
+    /* display: flex;*/
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    /* background-color: rgba(255, 255, 255, 0.779); */
+    /* box-shadow: 9px 9px 10px rgb(0 0 0 / 30%);
+    border-radius: 2em; */
+        /* max-width: 270px; */
+    /* height: 267px; */
+    /* padding: 3%;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 5%; */
+
+
+
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 5px #999;
+    /* border-radius: 2em; */
+    padding: 3%;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 5%;
+}
+
+h1{
+    /* box-shadow: 0px 0px 14px rgb(0 0 0 / 32%); */
+    /* box-shadow: 0px 17px 14px -8px rgba(0,0,0,0.45); */
+    /* padding: 3%; */
+    margin-bottom:2%;
+}
+
+hr{
+    /* box-shadow: 0px 17px 14px -8px rgba(0,0,0,0.45); */
+    /* border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
+/*  */
+border: 0; 
+height: 1px; 
+background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+
+    /* height: 10px;
+	border: 0;
+	/* box-shadow: 0 10px 10px -10px #8c8b8b inset; */
+    /*box-shadow: 0px 17px 14px -8px rgba(0,0,0,0.45); */
+
+}
+
+.titulo{
+    text-align: right;
+
+
+}
+
+.proyecto{
+    /* margin-top:2%; */
+    /* background-color: aqua; */
+    /* text-align: center;
+    padding: 2%;
+    border-radius: 1em;
+    box-shadow: 0px 0px 14px rgb(0 0 0 / 32%); */
+
+
+
+    /* text-align: center;
+    padding: 2%;
+    border-radius: 1em;
+    box-shadow: 0px 17px 14px -8px rgb(0 0 0 / 45%);
+    border-top: none;
+    margin-bottom: 2em; */
+
+
+
+    text-align: center;
+    padding: 2%;
+    border-radius: 1em;
+    box-shadow: 0px 17px 14px -18px rgb(0 0 0 / 36%);
+    border-top: none;
+    border-right: none;
+    margin-bottom: 2em;
+    border-left: none;
+
+
+
+}
+
+.logo, .descripcion-proyecto{
+    align-self: center;
+    border-radius: 5em;
+    /* width: 100%; */
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+@media (max-width: 576px){
+
+    .logo{
+        width: 20%;
+        margin-bottom: 4%;
+    }
+    /* img{
+        width: 50%;
+    } */
+
+}
