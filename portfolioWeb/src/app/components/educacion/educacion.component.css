@@ -10,6 +10,7 @@
     padding: 2em;
 }
 
+
 h2, h3{
     display: inline;
 }
@@ -25,7 +26,6 @@ h2, h3{
     border-top-left-radius: 3em;
     border-top-right-radius: 3em;
 }
-
 
 
 .descripcion{
