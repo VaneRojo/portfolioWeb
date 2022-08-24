@@ -86,7 +86,5 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>BackEnd</module>
-    </modules>
+
 </project>
