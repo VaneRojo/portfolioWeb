@@ -34,8 +34,12 @@
   </a>
 
   <!-- <a  href="/login" type="button" title="Sing In">  -->
-  <button type="button" title="Sing In" (click)="login()"> 
+  <button type="button" title="Sing In" (click)="login()" *ngIf="!isLogged"> 
     <i class="fa-solid fa-right-to-bracket fa-2x redSocial sing-in"></i>
+  </button> 
+  <button type="button" title="Sing Out" (click)="onLogOut()" *ngIf="isLogged"> 
+    <i class="fa-solid fa-right-from-bracket fa-2x redSocial sing-out"></i>
+    
   </button> 
 </div>
 <!-- <a target="_blank"  href="#" title="Sing In" > -->
