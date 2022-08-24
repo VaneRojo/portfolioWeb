@@ -27,7 +27,7 @@
         <div class="col-sm-8 col-lg-8 form">
           <div class="card-body py-5 px-sm-5 px-md-5 form">
   
-            <form #f="ngForm"(ngSubmit)="onLogin()" novalidate>
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
               <!-- Email input -->
               <div class="form-outline sm-4 mb-4">
                 <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control" placeholder="Usuario" [(ngModel)]="nombreUsuario" required />
@@ -57,7 +57,7 @@
               </div>
   
               <!-- Submit button -->
-              <button type="button" class="btn btn-primary btn-block sm-4 mb-4">Iniciar Sesión</button>
+              <button type="button" class="btn btn-primary btn-block sm-4 mb-4" type="submit">Iniciar Sesión</button>
   
             </form>
   
