@@ -40,7 +40,8 @@ a{
    color: white;
     /* padding: 0px; */
     padding-right: 0px;
-    margin: 0.7px 3px -0.7px 3px;
+    /* margin: 0.7px 3px -0.7px 3px; */
+    margin: -0.3px 3px -1.7px 2px;
 }
 
 .redSocial:hover{
@@ -84,15 +85,27 @@ a{
     /* justify-content: center; */
     border-radius: 0.7em;
     display: inline-table;
-    padding-left: 0.1px;
-    padding-right: inherit;
-    padding-top: 0.7px;
-    padding-bottom: 0.7px;
+    padding-left: 1.1px;
+    padding-right: 1.1px;
+    padding-top: 1.5px;
+    padding-bottom: 1.1px;
 }
 
 button{
     background: none;
     border: none;
+}
+
+.sing-out{
+    /* margin-top: -1em; */
+    /* padding: 3px 10px; */
+    /* background: rgb(142, 43, 167); */
+    background: rgb(255, 40, 40);
+    
+    /* margin-right: 5px; */
+    color: rgb(254, 253, 255);
+    border-radius: 7em;
+    padding: 0 5px 0px 0px;
 }
 
 

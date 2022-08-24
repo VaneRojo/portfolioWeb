@@ -22,8 +22,9 @@ export class SocialMediaComponent implements OnInit {
   
   }
 
-  onLogout(): void {
-    
+  onLogOut(): void {
+    this.tokenService.logOut();
+    window.location.reload();
   }
 
   login(){
