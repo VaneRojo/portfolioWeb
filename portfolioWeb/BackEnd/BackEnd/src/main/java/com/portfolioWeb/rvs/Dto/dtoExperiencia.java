@@ -23,7 +23,7 @@ public class dtoExperiencia {
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombrE, String descripcionE, String logoE) {
+    public dtoExperiencia(String nombreE, String descripcionE, String logoE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.logoE = logoE;
