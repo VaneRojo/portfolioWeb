@@ -58,7 +58,7 @@ public class CExperiencia {
         }
         
         Experiencia experiencia = new Experiencia(dtoexp.getNombreE(), dtoexp.getDescripcionE(), 
-                dtoexp.getLogoE(), dtoexp.getFechaInicioE(), dtoexp.getFechaFinE(), dtoexp.isTrabajoActualE());
+                dtoexp.getLogoE(), dtoexp.isTrabajoActualE(), dtoexp.getFechaInicioE(), dtoexp.getFechaFinE());
         sExperiencia.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
