@@ -4,6 +4,7 @@
  */
 package com.portfolioWeb.rvs.Entity;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,16 +22,23 @@ public class Experiencia {
     private String nombreE;
     private String descripcionE;
     private String logoE;
+    private Date fechaInicioE;
+    private Date fechaFinE;
+    private boolean trabajoActualE;
     
     //Constructores
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descripcionE, String logoE) {
+    public Experiencia(String nombreE, String descripcionE, String logoE, Date fechaInicioE, Date fechaFinE, boolean trabajoActualE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.logoE = logoE;
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
+        this.trabajoActualE = trabajoActualE;
+        
     }
     
     //Getters And Setters
@@ -66,5 +74,31 @@ public class Experiencia {
     public void setLogoE(String logoE) {
         this.logoE = logoE;
     }
+
+    public Date getFechaInicioE() {
+        return fechaInicioE;
+    }
+
+    public void setFechaInicioE(Date fechaInicioE) {
+        this.fechaInicioE = fechaInicioE;
+    }
+
+    public Date getFechaFinE() {
+        return fechaFinE;
+    }
+
+    public void setFechaFinE(Date fechaFinE) {
+        this.fechaFinE = fechaFinE;
+    }
+
+    public boolean isTrabajoActualE() {
+        return trabajoActualE;
+    }
+
+    public void setTrabajoActualE(boolean trabajoActualE) {
+        this.trabajoActualE = trabajoActualE;
+    }
+    
+    
     
 }

@@ -4,6 +4,7 @@
  */
 package com.portfolioWeb.rvs.Dto;
 
+import java.util.Date;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -18,15 +19,25 @@ public class dtoExperiencia {
     private String descripcionE;
     private String logoE;
     
+    @NotBlank
+    private Date fechaInicioE;
+    
+    private Date fechaFinE;
+    
+    private boolean trabajoActualE;
+    
     //Constructores
 
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE, String logoE) {
+    public dtoExperiencia(String nombreE, String descripcionE, String logoE, Date fechaInicioE, Date fechaFinE, boolean trabajoActualE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.logoE = logoE;
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
+        this.trabajoActualE = trabajoActualE;
     }
     
     //Getters And Setters
@@ -54,6 +65,31 @@ public class dtoExperiencia {
     public void setLogoE(String logoE) {
         this.logoE = logoE;
     }
+
+    public Date getFechaInicioE() {
+        return fechaInicioE;
+    }
+
+    public void setFechaInicioE(Date fechaInicioE) {
+        this.fechaInicioE = fechaInicioE;
+    }
+
+    public Date getFechaFinE() {
+        return fechaFinE;
+    }
+
+    public void setFechaFinE(Date fechaFinE) {
+        this.fechaFinE = fechaFinE;
+    }
+
+    public boolean isTrabajoActualE() {
+        return trabajoActualE;
+    }
+
+    public void setTrabajoActualE(boolean trabajoActualE) {
+        this.trabajoActualE = trabajoActualE;
+    }
+    
     
     
 }
