@@ -1,3 +1,6 @@
+*{
+    text-transform: capitalize;
+}
 
 .row-principal{
     --bs-gutter-x: -1.5rem;

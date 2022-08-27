@@ -28,14 +28,14 @@
           
           <span *ngIf="Experiencia.fechaFinE != null">
             <h2>{{Experiencia.nombreE}}</h2> - 
-            <h3> {{Experiencia.fechaInicioE | date : 'MMMM y'}}  - {{Experiencia.fechaFinE | date:'MMMM y'}} </h3>
+            <h3> {{Experiencia.fechaInicioE | date : 'MMMM y' : 'es-AR'}}  - {{Experiencia.fechaFinE | date : 'MMMM y'  : 'es-AR' }} </h3>
           </span>
           <!-- <p> DatePipe:{{Experiencia.fechaInicioE.toISOString() | date}}</p> -->
   <!-- <p>DatePipe:{{todayString | date}}</p> -->
           <span *ngIf="Experiencia.fechaFinE 
           == null">
             <h2>{{Experiencia.nombreE}}</h2> - 
-            <h3> {{Experiencia.fechaInicioE | date:'MMMM y'}}  - Actualidad  </h3>
+            <h3> {{Experiencia.fechaInicioE | date:'MMMM y' : 'es-AR'}}  - Actualidad  </h3>
           </span>
           
          
@@ -47,7 +47,7 @@
               <button class="btn btn-edit" routerLink="/editExp/{{Experiencia.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
-              <button class="btn btn-delete">
+              <button class="btn btn-delete" (click)="delete(Experiencia.id)">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>

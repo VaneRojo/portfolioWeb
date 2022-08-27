@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,12 +20,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { interceptorProvider } from './service/interceptor-service';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+
+
 import { DatePipe } from '@angular/common';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { interceptorProvider } from './service/interceptor-service';
 
-
+import localeEs from '@angular/common/locales/es-AR';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs, 'es-AR'); 
 
 
 @NgModule({
@@ -59,7 +63,8 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     DatePipe
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    { provide: LOCALE_ID, useValue: 'es-AR' },
   ],
   bootstrap: [AppComponent]
 })
