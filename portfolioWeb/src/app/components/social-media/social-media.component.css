@@ -75,7 +75,9 @@ a{
     border-radius: 7em;
     padding: 0 0px 0px 5px;
 }
-
+.redes, .instagram{
+    margin-bottom: 0.5px;
+}
 .instagram-background{
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
     /* width: 60px; */
@@ -88,7 +90,7 @@ a{
     padding-left: 1.1px;
     padding-right: 1.1px;
     padding-top: 1.5px;
-    padding-bottom: 1.1px;
+    padding-bottom: 0px;
 }
 
 button{

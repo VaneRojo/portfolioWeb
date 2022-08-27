@@ -54,9 +54,9 @@ h1, button{
     /* margin-right: 3em; */
     /* margin-bottom: 5%; */
     background: repeating-linear-gradient(145deg, lavender, lavender, transparent 28px);
-    background: repeating-linear-gradient(145deg, lavender, lavender, transparent 226px);
-    background: repeating-linear-gradient(145deg, white, lavender, transparent 6px);
-    background: transparent;
+    /* background: repeating-linear-gradient(145deg, lavender, lavender, transparent 226px); */
+    /* background: repeating-linear-gradient(145deg, white, lavender, transparent 6px); */
+    /* background: transparent; */
     border: none;
     padding-bottom: 0;
 }
