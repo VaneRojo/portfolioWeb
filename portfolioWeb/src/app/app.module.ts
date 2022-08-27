@@ -10,7 +10,6 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { SeparadorComponent } from './components/separador/separador.component';
-import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
@@ -29,6 +28,10 @@ import { interceptorProvider } from './service/interceptor-service';
 
 import localeEs from '@angular/common/locales/es-AR';
 import { registerLocaleData } from '@angular/common';
+import { NewEducacionComponent } from './components/Educacion/new-educacion.component';
+import { EditeducacionComponent } from './components/Educacion/editeducacion.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
 registerLocaleData(localeEs, 'es-AR'); 
 
 
@@ -42,7 +45,6 @@ registerLocaleData(localeEs, 'es-AR');
     BannerComponent,
     ExperienciaComponent,
     SeparadorComponent,
-    EncabezadoComponent,
     EducacionComponent,
     HysComponent,
     ProyectoComponent,
@@ -50,7 +52,11 @@ registerLocaleData(localeEs, 'es-AR');
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditeducacionComponent,
+    NewProyectoComponent,
+    EditProyectoComponent
    
   ],
   imports: [

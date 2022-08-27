@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="row">
+        <div class="col-12">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreInsti">Nombre de la Institución <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nombreInsti" name="nombreInsti" [(ngModel)]="nombreInsti" placeholder="Nombre de la Institución" required>
+                </div>
+                <div class="form-group">    
+                    <label for="tituloEdu">Título recibido <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="tituloEdu" name="tituloEdu" [(ngModel)]="tituloEdu" placeholder="Título recibido" required>
+                </div>    
+
+                <div class="form-group">
+                    <!-- Poner [(ngModel)]="nombreInsti" en los campos de fecha-->
+                    <label for="fechaComienzoEdu">Fecha de Comienzo <span class="required">*</span></label>
+                    <input type="date" class="form-control" id="fechaComienzoEdu" name="fechaComienzoEdu" date="yyyy-MM-dd" [(ngModel)]="fechaInicioEdu" required >
+                </div>  
+
+                <div class="form-group" >  
+                    <label for="fechaFinEdu">Fecha de Fin <span class="required">*</span></label>
+                    <input type="date" class="form-control" id="fechaFinEdu" name="fechaFinEdu" date="yyyy-MM-dd"   [(ngModel)]="fechaFinEdu" required>
+                </div>
+
+                <div class="form-group">    
+                    <label for="descripcionEdu">Descripción <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="descripcionEdu" name="descripcionEdu" [(ngModel)]="descripcionEdu" placeholder="Descripción" required>
+                </div> 
+
+                <div class="form-group">    
+                    <label for="nivelEdu">Nivel de Estudio <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nivelEdu" name="nivelEdu" [(ngModel)]="nivelEdu" placeholder="Nivel educativo" required>
+                </div> 
+                
+
+                <div class="form-group">
+                    <label for="logoEdu">URL Logo</label>
+                    <input type="text" class="form-control" id="logoEdu" name="logoEdu" [(ngModel)]="logoEdu" placeholder="URL del logo" required>
+
+                </div>
+                
+                
+                <button class="btn btn-success float-right">
+                    Agregar Educación
+                </button>
+                <button class="btn btn-info float-right"  routerLink="">
+                    Volver
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
