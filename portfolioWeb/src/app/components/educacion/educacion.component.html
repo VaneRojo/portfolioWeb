@@ -1,32 +1,66 @@
 <div class="card descripcion">
   
-    <div class="row">
-      <div class="titulo">
-        <h1> Educacion</h1>
-        <hr class="undarline">
-      </div>
+  <div class="row">
+    <div class="titulo">
+      <h1> Educacion
+      </h1>
+        <button class="btn btn-success" routerLink="/nuevaExp" *ngIf="isLogged">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      <hr class="undarline">
+    </div>
+    <!-- <div class="card-header experiencia">  -->
+    <!-- </div>
+    <div class="card-body"> -->
+      <!-- <div class="row"> -->
+    <div class="card empleo" *ngFor="let Educacion of educacion">
       
-      <div class="card educacion ">
-        <div class="row ">
-  
-            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-educacion">
-                <h2>Desarrollador Web</h2> - <h3> Julio 2020 - Actualidad</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-            </div>
+      <div class="row">
 
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-                
-                <img src="../../../assets/img/logo.png" class="img-fluid logo" >
-            
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
+          <!-- <div class="container"> -->
+            <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
+            <img src="{{Educacion.logoE}}" class="img-fluid logo" >
+          <!-- </div> -->
+          
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-educacion">
+          
+          <span *ngIf="Educacion.fechaFinEdu != null">
+            <h2>{{Educacion.nombreInsti}}</h2> - 
+            <h3> {{Educacion.fechaInicioEdu | date : 'MMMM y' : 'es-AR'}}  - {{Educacion.fechaFinEdu | date : 'MMMM y'  : 'es-AR' }} </h3>
+          </span>
+          <!-- <p> DatePipe:{{Educacion.fechaInicioEdu.toISOString() | date}}</p> -->
+  <!-- <p>DatePipe:{{todayString | date}}</p> -->
+          <span *ngIf="Educacion.fechaFinEdu 
+          == null">
+            <h2>{{Educacion.nombreInsti}}</h2> - 
+            <h3> {{Educacion.fechaInicioEdu | date:'MMMM y' : 'es-AR'}}  - Actualidad  </h3>
+          </span>
+          
+         
+          <p>{{Educacion.tituloEdu}}</p>
+          
+          
+          <div class="row" *ngIf="isLogged">
+            <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
+              <button class="btn btn-edit" routerLink="/editExp/{{Educacion.id}}">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+              <button class="btn btn-delete" (click)="delete(Educacion.id)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </div>
+          </div>
+
 
         </div>
       </div>
       
-      
-  
-    </div> 
-  </div>
-  
-  <app-separador></app-separador>
-  
+    </div>
+    
+
+  </div> 
+</div>
+
+<app-separador></app-separador>
