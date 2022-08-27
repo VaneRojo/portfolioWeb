@@ -81,6 +81,9 @@ public class CExperiencia {
         experiencia.setNombreE(dtoexp.getNombreE());
         experiencia.setDescripcionE(dtoexp.getDescripcionE());
         experiencia.setLogoE(dtoexp.getLogoE());
+        experiencia.setTrabajoActualE(dtoexp.isTrabajoActualE());
+        experiencia.setFechaInicioE(dtoexp.getFechaInicioE());
+        experiencia.setFechaFinE(dtoexp.getFechaFinE());
         
         sExperiencia.save(experiencia);
         
