@@ -26,14 +26,25 @@
         </div>
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-empleo">
           
-          <h2>{{Experiencia.nombreE}}</h2> - <h3> Julio 2020 - Actualidad</h3>
+          <span *ngIf="Experiencia.fechaFinE != null">
+            <h2>{{Experiencia.nombreE}}</h2> - 
+            <h3> {{Experiencia.fechaInicioE | date : 'MMMM y'}}  - {{Experiencia.fechaFinE | date:'MMMM y'}} </h3>
+          </span>
+          <!-- <p> DatePipe:{{Experiencia.fechaInicioE.toISOString() | date}}</p> -->
+  <!-- <p>DatePipe:{{todayString | date}}</p> -->
+          <span *ngIf="Experiencia.fechaFinE 
+          == null">
+            <h2>{{Experiencia.nombreE}}</h2> - 
+            <h3> {{Experiencia.fechaInicioE | date:'MMMM y'}}  - Actualidad  </h3>
+          </span>
+          
          
           <p>{{Experiencia.descripcionE}}</p>
           
           
-          <div class="row">
+          <div class="row" *ngIf="isLogged">
             <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-              <button class="btn btn-edit">
+              <button class="btn btn-edit" routerLink="/editExp/{{Experiencia.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
               <button class="btn btn-delete">

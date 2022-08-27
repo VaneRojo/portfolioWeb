@@ -3,6 +3,7 @@ import { subscribeOn } from 'rxjs';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-experiencia',
@@ -30,7 +31,11 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
+  
+
+
   cargarExperiencia():void{
+    
     this.sExperiencia.lista().subscribe(data => {this.expe = data});
   }
 

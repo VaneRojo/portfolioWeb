@@ -1,0 +1,52 @@
+<div class="card" *ngIf="expLab">
+    <div class="row">
+        <div class="col-12">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreE">Nombre de la empresa <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" placeholder="Nombre de la empresa" required>
+                </div>
+                <div class="form-group">    
+                    <label for="descripcionE">Descripción de tarea <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" placeholder="Descripción del puesto" required>
+                </div>    
+
+                <div class="form-group">
+                    <label for="fechaComienzoE">Fecha de Comienzo <span class="required">*</span></label>
+                    <input type="date" class="form-control" id="fechaComienzoE" name="fechaComienzoE" date="yyyy-MM-dd" [(ngModel)]="expLab.fechaInicioE" required >
+                    <p>Valor Actual: {{expLab.fechaInicioE | date:'dd-MM-yyyy'}}</p>
+                </div>  
+
+                <div class="form-group" *ngIf="expLab.trabajoActualE==false">  
+                    <label for="fechaFinE">Fecha de Fin <span class="required">*</span></label>
+                    <input type="date" class="form-control" id="fechaFinE" name="fechaFinE" date="yyyy-MM-dd"  [(ngModel)]="expLab.fechaFinE" required>
+                    <p>Valor Actual: {{expLab.fechaFinE | date:'dd-MM-yyyy'}}</p>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check ">
+                        <input type="checkbox" class="form-check-input checkbox-2x" id="trabajoActualE" name="trabajoActualE" [(ngModel)]="expLab.trabajoActualE" value="" required>
+                        <label class="form-check-label" for="trabajoActualE">
+                            Trabajo Actual?
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="logoE">URL Logo</label>
+                    <input type="text" class="form-control" id="logoE" name="logoE" [(ngModel)]="expLab.logoE" placeholder="URL del logo" required>
+
+                </div>
+                
+                
+                <button class="btn btn-edit float-right">
+                    Actualizar
+                </button>
+                <button class="btn btn-info float-right"  routerLink="">
+                    Volver
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
