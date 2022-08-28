@@ -77,13 +77,13 @@ hr{
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
 /*  */
-border: 0; 
-height: 2.5px; 
-/* background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);  */
-background: linear-gradient(45deg, transparent, black, transparent);
+    border: 0; 
+    height: 2.5px; 
+    /* background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);  */
+    background: linear-gradient(45deg, transparent, black, transparent);
 
     /* height: 10px;
 	border: 0;

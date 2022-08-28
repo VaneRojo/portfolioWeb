@@ -39,6 +39,8 @@ import { NewProyectoComponent } from './components/proyecto/new-proyecto.compone
 import { NewEducacionComponent } from './components/Educacion/new-educacion.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewSkillComponent } from './components/hys/new-skill.component';
+import { EditSkillComponent } from './components/hys/edit-skill.component';
 
 registerLocaleData(localeEs, 'es-AR'); 
 
@@ -64,7 +66,9 @@ registerLocaleData(localeEs, 'es-AR');
     NewEducacionComponent,
     EditeducacionComponent,
     NewProyectoComponent,
-    EditProyectoComponent
+    EditProyectoComponent,
+    NewSkillComponent,
+    EditSkillComponent
    
   ],
   imports: [
