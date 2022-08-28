@@ -72,7 +72,8 @@ public class CSkill {
         Skill skill = new Skill(
                 dtoskill.getNombreS(),
                 dtoskill.getPorcentajeS(),
-                dtoskill.getUrlImagenS());
+                dtoskill.getUrlImagenS(),
+                dtoskill.isMostrarImagenS());
         sSkill.save(skill);
         
         return new ResponseEntity(new Mensaje("Skill creado"), HttpStatus.OK);
@@ -98,6 +99,7 @@ public class CSkill {
         skill.setNombreS(dtoskill.getNombreS());
         skill.setPorcentajeS(dtoskill.getPorcentajeS());
         skill.setUrlImagenS(dtoskill.getUrlImagenS());
+        skill.setMostrarImagenS(dtoskill.isMostrarImagenS());
         
         sSkill.save(skill);
         
