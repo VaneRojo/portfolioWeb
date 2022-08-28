@@ -28,16 +28,18 @@ public class Skill {
     private String porcentajeS;
     
     private String urlImagenS;
+    private boolean mostrarImagenS;
     
     //Constructores 
 
     public Skill() {
     }
 
-    public Skill(String nombreS, String porcentajeS, String urlImagenS) {
+    public Skill(String nombreS, String porcentajeS, String urlImagenS, boolean mostrarImagenS) {
         this.nombreS = nombreS;
         this.porcentajeS = porcentajeS;
         this.urlImagenS = urlImagenS;
+        this.mostrarImagenS = mostrarImagenS;
     }
     
     //Getters And Setters
@@ -73,4 +75,14 @@ public class Skill {
     public void setUrlImagenS(String urlImagenS) {
         this.urlImagenS = urlImagenS;
     }
+
+    public boolean isMostrarImagenS() {
+        return mostrarImagenS;
+    }
+
+    public void setMostrarImagenS(boolean mostrarImagenS) {
+        this.mostrarImagenS = mostrarImagenS;
+    }
+    
+    
 }
