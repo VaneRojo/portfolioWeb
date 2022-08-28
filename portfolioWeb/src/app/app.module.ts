@@ -22,17 +22,23 @@ import { LoginComponent } from './components/login/login.component';
 
 
 import { DatePipe } from '@angular/common';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
-import { interceptorProvider } from './service/interceptor-service';
+
+
+
 
 import localeEs from '@angular/common/locales/es-AR';
 import { registerLocaleData } from '@angular/common';
-import { NewEducacionComponent } from './components/Educacion/new-educacion.component';
 
-import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
-import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
+
+
+
 import { EditeducacionComponent } from './components/educacion/edit-educacion.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
+import { NewEducacionComponent } from './components/Educacion/new-educacion.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 
 registerLocaleData(localeEs, 'es-AR'); 
 
@@ -58,7 +64,7 @@ registerLocaleData(localeEs, 'es-AR');
     NewEducacionComponent,
     EditeducacionComponent,
     NewProyectoComponent,
-    EditProyectoComponent,
+    EditProyectoComponent
    
   ],
   imports: [
