@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Proyecto } from 'src/app/model/proyecto';
-import { ProyectoService } from 'src/app/service/proyecto.service';
-import { DatePipe } from '@angular/common';
+import { Educacion } from 'src/app/model/educacion';
+import { EducacionService } from 'src/app/service/educacion.service';
+
 @Component({
-  selector: 'app-edit-proyecto',
-  templateUrl: './edit-proyecto.component.html',
-  styleUrls: ['./edit-proyecto.component.css']
+  selector: 'app-editeducacion',
+  templateUrl: './edit-educacion.component.html',
+  styleUrls: ['./edit-educacion.component.css']
 })
-export class EditProyectoComponent implements OnInit {
+export class EditeducacionComponent implements OnInit {
 
-  proyecto: Proyecto = null!;
+  edu: Educacion = null!;
 
-  constructor(private sProyecto: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private sEducacion: EducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sProyecto.detail(id).subscribe(
+    this.sEducacion.detail(id).subscribe(
       data => {
-        this.proyecto = data;
+        this.edu = data;
     // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
         // data.fechaInicioE.toString();
         // data.fechaInicioE.getDate();
@@ -32,7 +32,7 @@ export class EditProyectoComponent implements OnInit {
     
     onUpdate(): void {
       const id = this.activatedRouter.snapshot.params['id'];
-      this.sProyecto.update(id, this.proyecto).subscribe(
+      this.sEducacion.update(id, this.edu).subscribe(
         data => {
           this.router.navigate(['']);
           alert("La educación se editó con éxito");
@@ -42,5 +42,6 @@ export class EditProyectoComponent implements OnInit {
       }
     )
   }
+
 
 }

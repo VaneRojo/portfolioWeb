@@ -4,7 +4,7 @@
     <div class="titulo">
       <h1> Proyecto
       </h1>
-        <button class="btn btn-success" routerLink="/nuevaEdu" *ngIf="isLogged">
+        <button class="btn btn-success" routerLink="/nuevoP" *ngIf="isLogged">
           <i class="fa-solid fa-plus"></i>
         </button>
       <hr class="undarline">
@@ -20,40 +20,29 @@
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
           <!-- <div class="container"> -->
             <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-            <img src="{{Proyecto.logoEdu}}" class="img-fluid logo" >
+            <img src="{{Proyecto.logoP}}" class="img-fluid logo" >
           <!-- </div> -->
         </div>
 
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
 
-          <h2>{{Proyecto.nombreInsti}}</h2> 
-          
-          <h3>{{Proyecto.tituloEdu}}</h3>
-          
-          <span *ngIf="Proyecto.fechaFinEdu != null">
-            <h4> {{Proyecto.fechaInicioEdu | date : 'MMMM y' : 'es-AR'}}  - 
-              {{Proyecto.fechaFinEdu | date : 'MMMM y'  : 'es-AR' }} 
-              /
-              {{Proyecto.nivelEdu}}  
-            </h4> 
+          <h2>{{Proyecto.nombreP}}
 
-          </span>
-          <!-- <p> DatePipe:{{Proyecto.fechaInicioEdu.toISOString() | date}}</p> -->
-          <!-- <p>DatePipe:{{todayString | date}}</p> -->
-          <span *ngIf="Proyecto.fechaFinEdu == null">
-             
-            <h4> {{Proyecto.fechaInicioEdu | date:'MMMM y' : 'es-AR'}}  - Actualidad  
-              /
-              {{Proyecto.nivelEdu}}  
-            </h4>
-          </span>
+            <span *ngIf="Proyecto.yearP != null">
+              <h3> - {{Proyecto.yearP | date : 'y' : 'es-AR'}} </h3> 
+            </span>
+          </h2> 
+          <br>
           
-          <p *ngIf="Proyecto.fechaFinEdu != null">{{Proyecto.descripcionEdu}}</p>
+          
+          <h6><a href="{{Proyecto.urlP}}" target="_blank"> Ir al Proyecto</a>
+          </h6>
+          <p *ngIf="Proyecto.descripcionP != null">{{Proyecto.descripcionP}}</p>
           
           
           <div class="row " *ngIf="isLogged">
             <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-              <button class="btn btn-edit" routerLink="/editEdu/{{Proyecto.id}}">
+              <button class="btn btn-edit" routerLink="/editP/{{Proyecto.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
               <button class="btn btn-delete" (click)="delete(Proyecto.id)">

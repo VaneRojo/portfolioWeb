@@ -1,1 +1,41 @@
-<p>edit-proyecto works!</p>
+<div class="card">
+    <div class="row">
+        <div class="col-12">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreP">Nombre del Proyecto <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" placeholder="Nombre del Proyecto" required>
+                </div>
+                <div class="form-group">    
+                    <label for="descripcionP">Descripción <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" placeholder="Descripción" required>
+                </div>    
+
+                <div class="form-group">    
+                    <label for="urlP">URL del Proyecto <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="urlP" name="urlP" [(ngModel)]="proyecto.urlP" placeholder="URL del Proyecto" required>
+                </div> 
+
+                <div class="form-group">    
+                    <label for="yearP">Año del proyecto </label>
+                    <input type="text" class="form-control" id="yearP" name="yearP" [(ngModel)]="proyecto.yearP" placeholder="Año del proyecto" required>
+                </div> 
+                
+
+                <div class="form-group">
+                    <label for="logoP">URL Logo</label>
+                    <input type="text" class="form-control" id="logoP" name="logoP" [(ngModel)]="proyecto.logoP" placeholder="URL del logo" required>
+
+                </div>
+                
+                
+                <button class="btn btn-success float-right">
+                    Actualizar Proyecto
+                </button>
+                <button class="btn btn-info float-right"  routerLink="">
+                    Volver
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

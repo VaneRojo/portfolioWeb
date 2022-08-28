@@ -1,14 +1,14 @@
 export class Educacion {
-    id: number;
+    id?: number;
     nombreInsti: string;
     tituloEdu: string;
     fechaInicioEdu: Date;
-    fechaFinEdu: Date;
+    fechaFinEdu: Date | null;
     descripcionEdu: string;
     nivelEdu: string;
     logoEdu: string;
 
-    constructor(nombreInsti: string, tituloEdu: string, fechaInicioEdu: Date, fechaFinEdu: Date, descripcionEdu: string, nivelEdu: string, logoEdu: string){
+    constructor(nombreInsti: string, tituloEdu: string, fechaInicioEdu: Date, fechaFinEdu: Date | null, descripcionEdu: string, nivelEdu: string, logoEdu: string){
         this.nombreInsti = nombreInsti;
         this.tituloEdu = tituloEdu;
         this.fechaInicioEdu = fechaInicioEdu;

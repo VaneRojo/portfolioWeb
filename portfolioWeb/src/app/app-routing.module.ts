@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditeducacionComponent } from './components/Educacion/editeducacion.component';
+import { EditeducacionComponent } from './components/educacion/edit-educacion.component';
+
 import { NewEducacionComponent } from './components/Educacion/new-educacion.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
