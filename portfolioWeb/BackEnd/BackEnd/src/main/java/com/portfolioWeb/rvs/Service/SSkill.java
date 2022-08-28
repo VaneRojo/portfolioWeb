@@ -34,8 +34,8 @@ public class SSkill {
         return rSkill.findByNombreS(NombreS);
     }
     
-    public void save(Skill educacion){
-        rSkill.save(educacion);
+    public void save(Skill skill){
+        rSkill.save(skill);
     }
     
     public void delete(int id){

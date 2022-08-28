@@ -15,7 +15,7 @@ public class dtoSkill {
     private String nombreS;
     
     @NotBlank
-    private String porcentajeS;
+    private int porcentajeS;
     
     private String urlImagenS;
     private boolean mostrarImagenS;
@@ -25,7 +25,7 @@ public class dtoSkill {
     public dtoSkill() {
     }
 
-    public dtoSkill(String nombreS, String porcentajeS, String urlImagenS, boolean mostrarImagenS) {
+    public dtoSkill(String nombreS, int porcentajeS, String urlImagenS, boolean mostrarImagenS) {
         this.nombreS = nombreS;
         this.porcentajeS = porcentajeS;
         this.urlImagenS = urlImagenS;
@@ -42,11 +42,11 @@ public class dtoSkill {
         this.nombreS = nombreS;
     }
 
-    public String getPorcentajeS() {
+    public int getPorcentajeS() {
         return porcentajeS;
     }
 
-    public void setPorcentajeS(String porcentajeS) {
+    public void setPorcentajeS(int porcentajeS) {
         this.porcentajeS = porcentajeS;
     }
 

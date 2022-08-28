@@ -62,7 +62,7 @@ public class CSkill {
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoSkill dtoskill){
-        if(StringUtils.isBlank(dtoskill.getNombreS()) || StringUtils.isBlank(dtoskill.getPorcentajeS())){
+        if(StringUtils.isBlank(dtoskill.getNombreS()) || dtoskill.getPorcentajeS() == 0){
             return new ResponseEntity(new Mensaje("Los campos con * son obligatorios"), HttpStatus.BAD_REQUEST);
         }
         if(sSkill.existsByNombreS(dtoskill.getNombreS())){
@@ -90,7 +90,7 @@ public class CSkill {
             return new ResponseEntity(new Mensaje("El nombre del Skill ya existe"),HttpStatus.BAD_REQUEST);
         }
         
-        if(StringUtils.isBlank(dtoskill.getNombreS()) || StringUtils.isBlank(dtoskill.getPorcentajeS())){
+        if(StringUtils.isBlank(dtoskill.getNombreS()) || dtoskill.getPorcentajeS() == 0){
             return new ResponseEntity(new Mensaje("Los campos con * son obligatorios"), HttpStatus.BAD_REQUEST);
         }
         
