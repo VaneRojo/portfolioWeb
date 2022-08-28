@@ -40,8 +40,7 @@
           </span>
           <!-- <p> DatePipe:{{Educacion.fechaInicioEdu.toISOString() | date}}</p> -->
           <!-- <p>DatePipe:{{todayString | date}}</p> -->
-          <span *ngIf="Educacion.fechaFinEdu 
-          == null">
+          <span *ngIf="Educacion.fechaFinEdu == null">
              
             <h4> {{Educacion.fechaInicioEdu | date:'MMMM y' : 'es-AR'}}  - Actualidad  
               /
@@ -49,7 +48,7 @@
             </h4>
           </span>
           
-          <p>{{Educacion.descripcionEdu}}</p>
+          <p *ngIf="Educacion.fechaFinEdu != null">{{Educacion.descripcionEdu}}</p>
           
           
           <div class="row " *ngIf="isLogged">

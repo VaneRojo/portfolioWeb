@@ -1,60 +1,78 @@
 <div class="card descripcion">
   
-    <div class="row">
-      <div class="titulo">
-        <h1> Proyectos</h1>
-        <hr class="undarline">
+  <div class="row">
+    <div class="titulo">
+      <h1> Proyecto
+      </h1>
+        <button class="btn btn-success" routerLink="/nuevaEdu" *ngIf="isLogged">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      <hr class="undarline">
+    </div>
+    <!-- <div class="card-header experiencia">  -->
+    <!-- </div>
+    <div class="card-body"> -->
+      <!-- <div class="row"> -->
+    <div class="card proyecto" *ngFor="let Proyecto of proyecto">
+      
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
+          <!-- <div class="container"> -->
+            <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
+            <img src="{{Proyecto.logoEdu}}" class="img-fluid logo" >
+          <!-- </div> -->
+        </div>
+
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
+
+          <h2>{{Proyecto.nombreInsti}}</h2> 
+          
+          <h3>{{Proyecto.tituloEdu}}</h3>
+          
+          <span *ngIf="Proyecto.fechaFinEdu != null">
+            <h4> {{Proyecto.fechaInicioEdu | date : 'MMMM y' : 'es-AR'}}  - 
+              {{Proyecto.fechaFinEdu | date : 'MMMM y'  : 'es-AR' }} 
+              /
+              {{Proyecto.nivelEdu}}  
+            </h4> 
+
+          </span>
+          <!-- <p> DatePipe:{{Proyecto.fechaInicioEdu.toISOString() | date}}</p> -->
+          <!-- <p>DatePipe:{{todayString | date}}</p> -->
+          <span *ngIf="Proyecto.fechaFinEdu == null">
+             
+            <h4> {{Proyecto.fechaInicioEdu | date:'MMMM y' : 'es-AR'}}  - Actualidad  
+              /
+              {{Proyecto.nivelEdu}}  
+            </h4>
+          </span>
+          
+          <p *ngIf="Proyecto.fechaFinEdu != null">{{Proyecto.descripcionEdu}}</p>
+          
+          
+          <div class="row " *ngIf="isLogged">
+            <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
+              <button class="btn btn-edit" routerLink="/editEdu/{{Proyecto.id}}">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+              <button class="btn btn-delete" (click)="delete(Proyecto.id)">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+
+        
+
       </div>
       
+    </div>
+    
 
-      <div class="card proyecto ">
-        <div class="row ">
-  
-          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-            <img src="../../../assets/img/logo.png" class="img-fluid logo" >
-          </div>
-          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
-            <h2>Gestión de Turnos -</h2>  <h3> 2022</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-          </div>
-        </div>
-      </div>
+  </div> 
+</div>
 
-     
-      <div class="card proyecto ">
-        <div class="row ">
-  
-          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-            <img src="../../../assets/img/logo.png" class="img-fluid logo" >
-          </div>
-          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
-            <h2>Servicios Inmobiliarios -</h2>  <h3> 2021 </h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card proyecto ">
-        <div class="row ">
-  
-          <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-            <!-- <div class="container"> -->
-              <img src="../../../assets/img/logo.png" class="img-fluid logo" >
-            <!-- </div> -->
-            
-          </div>
-          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
-            <h2>Gestión de Stock -</h2>  <h3> 2019</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-          </div>
-        </div>
-      </div>
-      
-      
-  
-    </div> 
-  </div>
-  
-  <!-- <app-separador></app-separador> -->
-  
-
+<app-separador></app-separador>
