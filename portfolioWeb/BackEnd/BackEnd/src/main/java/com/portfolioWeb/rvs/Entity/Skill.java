@@ -25,7 +25,7 @@ public class Skill {
     private String nombreS;
     
     @NotNull
-    private String porcentajeS;
+    private int porcentajeS;
     
     private String urlImagenS;
     private boolean mostrarImagenS;
@@ -35,7 +35,7 @@ public class Skill {
     public Skill() {
     }
 
-    public Skill(String nombreS, String porcentajeS, String urlImagenS, boolean mostrarImagenS) {
+    public Skill(String nombreS, int porcentajeS, String urlImagenS, boolean mostrarImagenS) {
         this.nombreS = nombreS;
         this.porcentajeS = porcentajeS;
         this.urlImagenS = urlImagenS;
@@ -60,11 +60,11 @@ public class Skill {
         this.nombreS = nombreS;
     }
 
-    public String getPorcentajeS() {
+    public int getPorcentajeS() {
         return porcentajeS;
     }
 
-    public void setPorcentajeS(String porcentajeS) {
+    public void setPorcentajeS(int porcentajeS) {
         this.porcentajeS = porcentajeS;
     }
 
