@@ -104,7 +104,7 @@ public class AuthController {
      * @param bindingResult
      * @return
      */
-    @PutMapping("/personas/editar/{id}")
+    /*@PutMapping("/personas/editar/{id}")
     public Persona editar(@PathVariable("id") Long id, @RequestBody Persona persona){
         /*if(bindingResult.hasErrors()){
             return new ResponseEntity(new Mensaje("Campos mal puestos o email inválido"), HttpStatus.BAD_REQUEST);
@@ -130,7 +130,7 @@ public class AuthController {
         usuarioService.save(usuario);
         
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);*/
-        Persona per = personaService.findPersona(id);
+        /*Persona per = personaService.findPersona(id);
         per.setNombre(persona.getNombre());
         per.setApellido(persona.getApellido());
         per.setTelefono(persona.getTelefono());
@@ -143,7 +143,7 @@ public class AuthController {
         
         personaService.savePersona(per);
         return per;
-    }
+    }*/
     
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
