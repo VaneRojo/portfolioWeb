@@ -30,4 +30,16 @@ export class EditAcercaDeComponent implements OnInit {
     )
   }
 
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.sPersona.update(id, this.persona).subscribe(
+        data => {
+          this.router.navigate(['']);
+          alert("La educación se editó con éxito");
+      },err => {
+        alert("Error al modificar educación");
+      }
+    )
+  }
+
 }

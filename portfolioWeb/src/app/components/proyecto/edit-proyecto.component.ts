@@ -30,9 +30,9 @@ export class EditProyectoComponent implements OnInit {
     )
   }    
     
-    onUpdate(): void {
-      const id = this.activatedRouter.snapshot.params['id'];
-      this.sProyecto.update(id, this.proyecto).subscribe(
+  onUpdate(): void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.sProyecto.update(id, this.proyecto).subscribe(
         data => {
           this.router.navigate(['']);
           alert("La educación se editó con éxito");
