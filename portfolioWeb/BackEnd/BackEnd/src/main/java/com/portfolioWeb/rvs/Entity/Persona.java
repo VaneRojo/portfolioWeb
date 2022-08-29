@@ -54,4 +54,28 @@ public class Persona {
     /*@Size(min = 1, max = 50)*/
     private String titulo;
     
+    @NotNull
+    private String introduccion;
+    
+    
+    //Constructores
+
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String telefono, String mail, String img_perfil, String img_banner, int edad, String titulo, String introduccion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.mail = mail;
+        this.img_perfil = img_perfil;
+        this.img_banner = img_banner;
+        this.edad = edad;
+        this.titulo = titulo;
+        this.introduccion = introduccion;
+    }
+    
+    
+    
+    
 }

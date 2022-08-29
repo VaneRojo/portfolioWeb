@@ -55,7 +55,8 @@ public class PersonaController {
             @RequestParam("img_perfil") String nuevoImg_perfil,
             @RequestParam("img_banner") String nuevoImg_banner,
             @RequestParam("edad") int nuevoEdad,
-            @RequestParam("titulo") String nuevoTitulo){
+            @RequestParam("titulo") String nuevoTitulo,
+            @RequestParam("introduccion") String introduccion){
         Persona persona = ipersonaService.findPersona(id);
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
@@ -65,6 +66,7 @@ public class PersonaController {
         persona.setImg_banner(nuevoImg_banner);
         persona.setEdad(nuevoEdad);
         persona.setTitulo(nuevoTitulo);
+        persona.setIntroduccion(introduccion);
         
         ipersonaService.savePersona(persona);
         return persona;
