@@ -3,7 +3,7 @@ import { subscribeOn } from 'rxjs';
 import { Experiencia } from 'src/app/model/experiencia';
 
 import { TokenService } from 'src/app/service/token.service';
-import { DatePipe } from '@angular/common';
+// import { DatePipe } from '@angular/common';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 
 @Component({
