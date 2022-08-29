@@ -3,8 +3,11 @@ package com.portfolioWeb.rvs.Controller;
 
 import com.portfolioWeb.rvs.Entity.Persona;
 import com.portfolioWeb.rvs.Interface.IPersonaService;
+import com.portfolioWeb.rvs.Security.Controller.Mensaje;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,6 +31,16 @@ public class PersonaController {
     @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
+    }
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Persona> getById(@PathVariable("id") Long id){
+        if(!ipersonaService.existsById(id)){
+            return new ResponseEntity(new Mensaje("No existe ese registro"), HttpStatus.BAD_REQUEST);
+        }
+        
+        Persona persona = ipersonaService.getOne(id).get();
+        return new ResponseEntity(persona, HttpStatus.OK);
     }
     
     @PreAuthorize("hasRole('ADMIN')")

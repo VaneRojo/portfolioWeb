@@ -6,6 +6,7 @@ package com.portfolioWeb.rvs.Interface;
 
 import com.portfolioWeb.rvs.Entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 
 /**
@@ -26,4 +27,8 @@ public interface IPersonaService {
     
     //Buscar una Persona por ID
     public Persona findPersona(Long id);
+    
+    public boolean existsById(Long id);
+    
+    public Optional<Persona> getOne(Long id);
 }
