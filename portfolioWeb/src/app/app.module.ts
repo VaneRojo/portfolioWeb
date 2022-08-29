@@ -41,6 +41,7 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSkillComponent } from './components/hys/edit-skill.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 
 registerLocaleData(localeEs, 'es-AR'); 
 
@@ -68,7 +69,8 @@ registerLocaleData(localeEs, 'es-AR');
     NewProyectoComponent,
     EditProyectoComponent,
     NewSkillComponent,
-    EditSkillComponent
+    EditSkillComponent,
+    EditAcercaDeComponent
    
   ],
   imports: [

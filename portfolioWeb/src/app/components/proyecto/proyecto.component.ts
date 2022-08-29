@@ -16,7 +16,7 @@ export class ProyectoComponent implements OnInit {
   isLogged = false;
 
   ngOnInit(): void {
-    this.cargarEducacion();
+    this.cargarProyecto();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -25,7 +25,7 @@ export class ProyectoComponent implements OnInit {
     }
   }
 
-  cargarEducacion(): void {
+  cargarProyecto(): void {
     this.proyectoS.lista().subscribe(
       data => {
         this.proyecto = data;
@@ -37,7 +37,7 @@ export class ProyectoComponent implements OnInit {
     if(id != undefined){
       this.proyectoS.delete(id).subscribe(
         data => {
-          this.cargarEducacion();
+          this.cargarProyecto();
           alert("El proyecto se eliminó con éxito");
         }, err => {
           alert("No se pudo borrar el proyecto");

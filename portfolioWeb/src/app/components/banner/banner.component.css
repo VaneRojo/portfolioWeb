@@ -54,13 +54,7 @@
     }
 
 }
-/* @media (min-width: 1901px) and (max-width: 2000px) {
-    .img-perfil{
 
-        margin-left: 19%;
-    }
-
-} */
  @media (min-width: 1801px) and (max-width: 2001px) {
     .img-perfil{
 
@@ -68,13 +62,7 @@
     }
 
 }
-/*@media (min-width: 1701px) and (max-width: 1800px) {
-    .img-perfil{
 
-        margin-left: 16%;
-    }
-
-} */
 @media (min-width: 1601px) and (max-width: 1801px) {
     .img-perfil{
 
@@ -82,13 +70,7 @@
     }
 
 }
-/* @media (min-width: 1501px) and (max-width: 1600px) {
-    .img-perfil{
 
-        margin-left: 9%;
-    }
-
-} */
 @media (min-width: 1381px) and (max-width: 1601px) {
     .img-perfil{
 
@@ -153,46 +135,7 @@
     }
 
 }
-/* @media (min-width: 1101px) and (max-width: 1150px) {
-    .img-perfil{
-        margin-left: 7.5em;
-        /* margin-left: calc(1em - 50px);
-    }
 
-}
-@media (min-width: 1057px) and (max-width: 1100px) {
-    .img-perfil{
-        margin-left: 6em;
-    }
-
-}
-@media (min-width: 978px) and (max-width: 1056px) {
-    .img-perfil{
-        margin-left: 5em;
-    }
-
-}
-@media (min-width: 900px) and (max-width: 977px) {
-    .img-perfil{
-        margin-left: 4em;
-    }
-
-}
-@media (min-width: 778px) and (max-width: 899px) {
-    .img-perfil{
-        margin-inline-end: auto;
-        margin-left: 3em;
-    }
-
-}
-@media (min-width: 576px) and (max-width: 777px) {
-    .img-perfil{
-
-        margin-left: 2em;
-        width: 150px;
-    }
-
-} */
 
 @media (max-width: 576px){
 

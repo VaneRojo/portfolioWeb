@@ -21,6 +21,9 @@
 }
 
 
+
+
+
 .descripcion{
    
     justify-content: center;
@@ -60,9 +63,12 @@
     }
 
 }
+.btn-edit{
+    color: #ffc107;
+}
 
 .row{
-    padding-top: 3.5em;
+    padding-top: 0.5em;
     /* background-color: #e0baf138; */
     /* background-color: #dda6f629; */
     /* background-color: #dca6f632; */
@@ -80,21 +86,6 @@
     width: 100%;
 }
 
-
-
-/* @media (min-width: 356px){
-
-
-	.row{
-		margin-top: 0.5rem;
-	}
-
+.edit{
+    margin-inline-start: auto;
 }
-@media (max-width: 355px){
-
-
-	.row{
-		margin-top: 0.5rem;
-	}
-
-} */

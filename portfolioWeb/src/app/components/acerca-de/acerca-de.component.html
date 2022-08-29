@@ -1,6 +1,12 @@
   <app-banner></app-banner>
-
+  
+  
   <div class="row">
+    <div class="card-titles">
+      <button class="btn btn-edit col-1 float-right" routerLink="/editInfo/{{persona.id}}" *ngIf="isLogged">
+        <i class="fa-solid fa-pen"></i>
+      </button>
+    </div>
     <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-perfil-container"> -->
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
       <div class="card descripcion">
@@ -19,7 +25,7 @@
           <h1>Acerca de mí</h1>
         </div> -->
         <div class="card-body">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel distinctio quas culpa, adipisci esse saepe a non illum deleniti quaerat voluptate. Rerum sint velit sit voluptates culpa optio ea repellendus.</p>
+          <p>{{persona.introduccion}}</p>
           <div >
             <img src="../../../assets/img/about-me.png" class="img-acercaDe">
           </div>
@@ -27,7 +33,7 @@
       </div>
     </div>
   </div> 
-
+ 
   <app-separador></app-separador>
 
 
