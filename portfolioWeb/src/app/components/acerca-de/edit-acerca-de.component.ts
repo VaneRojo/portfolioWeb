@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAcercaDeComponent implements OnInit {
 
-  persona: persona = null!;
+  per: persona = new persona("","","","","","",0,"","");
 
   constructor(private sPersona: PersonaService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class EditAcercaDeComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sPersona.detail(id).subscribe(
       data => {
-        this.persona = data;
+        this.per = data;
         // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
         // data.fechaInicioE.toString();
         // data.fechaInicioE.getDate();
@@ -32,11 +32,14 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sPersona.update(id, this.persona).subscribe(
+    console.log(this.per);
+    this.sPersona.update(id, this.per).subscribe(
         data => {
           this.router.navigate(['']);
           alert("La información se editó con éxito");
+
       },err => {
+        console.log("Error: " + data);
         alert("Error al modificar información");
       }
     )
