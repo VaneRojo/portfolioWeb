@@ -4,6 +4,7 @@
  */
 package com.portfolioWeb.rvs.Security.Controller;
 
+import com.portfolioWeb.rvs.Entity.Persona;
 import com.portfolioWeb.rvs.Security.Dto.JwtDto;
 import com.portfolioWeb.rvs.Security.Dto.LoginUsuario;
 import com.portfolioWeb.rvs.Security.Dto.NuevoUsuario;
@@ -13,6 +14,7 @@ import com.portfolioWeb.rvs.Security.Enums.RolNombre;
 import com.portfolioWeb.rvs.Security.Service.RolService;
 import com.portfolioWeb.rvs.Security.Service.UsuarioService;
 import com.portfolioWeb.rvs.Security.jwt.JwtProvider;
+import com.portfolioWeb.rvs.Service.ImpPersonaService;
 import java.util.HashSet;
 import java.util.Set;
 import javax.validation.Valid;
@@ -27,9 +29,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -50,6 +54,9 @@ public class AuthController {
     RolService rolService;
     @Autowired
     JwtProvider jwtProvider;
+    
+    @Autowired
+    ImpPersonaService personaService;
     
     @PostMapping("/nuevo")
     public ResponseEntity<?> nuevo(@Valid @RequestBody NuevoUsuario nuevoUsuario, BindingResult bindingResult){
@@ -78,6 +85,71 @@ public class AuthController {
         
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
         
+    }
+    
+
+    /**
+     *
+     * @param id
+     * @param nuevoNombre
+     * @param nuevoApellido
+     * @param nuevoTelefono
+     * @param nuevoMail
+     * @param nuevoImg_perfil
+     * @param nuevoImg_banner
+     * @param nuevoEdad
+     * @param nuevoTitulo
+     * @param introduccion
+     * @param bindingResult
+     * @return
+     */
+    public Persona editar(@Valid @PathVariable Long id, 
+            @RequestParam("nombre") String nuevoNombre,
+            @RequestParam("apellido") String nuevoApellido,
+            @RequestParam("telefono") String nuevoTelefono,
+            @RequestParam("mail") String nuevoMail,
+            @RequestParam("img_perfil") String nuevoImg_perfil,
+            @RequestParam("img_banner") String nuevoImg_banner,
+            @RequestParam("edad") int nuevoEdad,
+            @RequestParam("titulo") String nuevoTitulo,
+            @RequestParam("introduccion") String introduccion, BindingResult bindingResult){
+        /*if(bindingResult.hasErrors()){
+            return new ResponseEntity(new Mensaje("Campos mal puestos o email inválido"), HttpStatus.BAD_REQUEST);
+        }*/
+        
+        /*if(usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())){
+            return new ResponseEntity(new Mensaje("Ese nombre de usuario ya existe"), HttpStatus.BAD_REQUEST);
+        }
+        
+        if(usuarioService.existsByEmail(nuevoUsuario.getEmail())){
+            return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
+        }
+        
+        Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(),
+            nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
+        
+        Set<Rol> roles = new HashSet<>();
+        roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
+        
+        if(nuevoUsuario.getRoles().contains("admin"))
+            roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
+        usuario.setRoles(roles);
+        usuarioService.save(usuario);
+        
+        return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);*/
+        Persona persona = personaService.findPersona(id);
+        persona.setNombre(nuevoNombre);
+        persona.setApellido(nuevoApellido);
+        persona.setTelefono(nuevoTelefono);
+        persona.setMail(nuevoMail);
+        persona.setImg_perfil(nuevoImg_perfil);
+        persona.setImg_banner(nuevoImg_banner);
+        persona.setEdad(nuevoEdad);
+        persona.setTitulo(nuevoTitulo);
+        persona.setIntroduccion(introduccion);
+        
+        personaService.savePersona(persona);
+        return persona;
     }
     
     @PostMapping("/login")
