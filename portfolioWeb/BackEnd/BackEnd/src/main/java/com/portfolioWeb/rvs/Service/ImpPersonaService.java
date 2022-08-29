@@ -8,6 +8,7 @@ import com.portfolioWeb.rvs.Entity.Persona;
 import com.portfolioWeb.rvs.Interface.IPersonaService;
 import com.portfolioWeb.rvs.Repository.IPersonaRepository;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +43,16 @@ public class ImpPersonaService implements IPersonaService {
         Persona persona = ipersonaRepository.findById(id).orElse(null);
         return persona;
     }
+    
+    public boolean existsById(Long id){
+        return ipersonaRepository.existsById(id);
+    }
+
+    @Override
+    public Optional<Persona> getOne(Long id){
+        return ipersonaRepository.findById(id);
+    }
+    
+    
     
 }
