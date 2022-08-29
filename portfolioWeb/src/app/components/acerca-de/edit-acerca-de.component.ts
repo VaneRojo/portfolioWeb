@@ -24,7 +24,7 @@ export class EditAcercaDeComponent implements OnInit {
         // data.fechaInicioE.getDate();
 
       }, err => {
-        alert("Error al modificar educación");
+        alert("nginitError al modificar información");
         this.router.navigate(['']);
       }
     )
@@ -35,9 +35,9 @@ export class EditAcercaDeComponent implements OnInit {
     this.sPersona.update(id, this.persona).subscribe(
         data => {
           this.router.navigate(['']);
-          alert("La educación se editó con éxito");
+          alert("La información se editó con éxito");
       },err => {
-        alert("Error al modificar educación");
+        alert("Error al modificar información");
       }
     )
   }
