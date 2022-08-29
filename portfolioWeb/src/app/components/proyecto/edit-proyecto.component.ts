@@ -6,7 +6,7 @@ import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-edit-proyecto',
   templateUrl: './edit-proyecto.component.html',
-  styleUrls: ['./edit-proyecto.component.css']
+  styleUrls: ['./edit-proyecto.component.css'] 
 })
 export class EditProyectoComponent implements OnInit {
 

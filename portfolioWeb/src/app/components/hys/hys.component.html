@@ -11,65 +11,24 @@
             </div>
         
         <!-- <div class="card educacion "> -->
-            <div class="row" *ngFor="let Skill of skill">
+            <div class="row">
                 
-    
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <!-- <div class="row " *ngIf="isLogged">
-                        <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-                        <button class="btn btn-edit" routerLink="/editS/{{skill.id}}">
-                            <i class="fa-solid fa-pen"></i>
-                        </button>
-                        <button class="btn btn-delete" (click)="delete(skill.id)">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                        </div>
-                    </div> -->
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'{{HTML}}'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [titleFontWeight]="'650'"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/html-logo.png'"
-                        [showImage]="false"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        [titleColor]="'#cb39d5'"
-                        
-                    ></circle-progress>
-                    <!-- <div class="container"> -->
-                    <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-                    <!-- </div> -->
-                    
-                </div>
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <div class="card">
-                        <div class="card-title">
+                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion" *ngFor="let Skill of skill">
+                    <div class="">
+                        <div class="">
                             <div class="row" *ngIf="isLogged">
-                                <div class="col " >
-                                <button class="btn btn-edit" routerLink="/editS/{{Skill.id}}">
+                                <div class="col" >
+                                <button class="btn btn-edit btn-sm" routerLink="/editS/{{Skill.id}}">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
-                                <button class="btn btn-delete" (click)="delete(Skill.id)">
+                                <button class="btn btn-delete btn-sm" (click)="delete(Skill.id)">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="card-body">
+                        
+                        <div class="">
 
                             <circle-progress
                                 [percent]="Skill.porcentajeS"
@@ -85,8 +44,8 @@
                                 [animation]="true"
                                 [animationDuration]="300"
                                 titleFontSize= 3em
-                                [imageSrc]="'assets/img/html-logo.png'"
-                                [showImage]="false"
+                                [imageSrc]="Skill.urlImagenS"
+                                [showImage]="Skill.mostrarImagenS"
                                 [imageWidth]="100"
                                 [imageHeight]="100"
                                 [responsive]="true"
@@ -98,310 +57,11 @@
 
                         </div>
                     </div>
-                    
-                        <!-- <div class="container"> -->
-                    <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-                    <!-- </div> -->
-                    
-                </div>
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'JS'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/js-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                        
-                    ></circle-progress>
-                    <!-- <div class="container"> -->
-                    <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-                    <!-- </div> -->
-                    
-                </div>
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'CSS'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/CSS-Logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                    <!-- <div class="container"> -->
-                    <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-                    <!-- </div> -->
-                    
-                </div>
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'php'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/php-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                
-                    
-                </div>
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'mysql'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/mysql-logo1.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                
-                    
-                </div>
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'bootstrap'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/bootstrap-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                
-                    
-                </div>
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'jquery'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/jquery-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                
-                    
-                </div>
-
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="20"
-                        [radius]="100"
-                        [title]="'net'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/net-core-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                </div>
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="50"
-                        [radius]="100"
-                        [title]="'angular'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/angular-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                </div>
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="80"
-                        [radius]="100"
-                        [title]="'github'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/github-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                </div>
-                
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="50"
-                        [radius]="100"
-                        [title]="'java'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/java-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                </div>
-
-
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion">
-                    <circle-progress
-                        [percent]="85"
-                        [radius]="100"
-                        [title]="'office'"
-                        [outerStrokeWidth]="5"
-                        [innerStrokeWidth]="2"
-                        [outerStrokeColor]="'#c5a6dd'"
-                        [outerStrokeGradient]="true"
-                        outerStrokeGradientStopColor = #e2c0f2
-                        [innerStrokeColor]="'#e5e5e6'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        titleFontSize= 3em
-                        [imageSrc]="'assets/img/microsoft-office-logo.png'"
-                        [showImage]="true"
-                        [imageWidth]="100"
-                        [imageHeight]="100"
-                        [responsive]="true"
-                        [showUnits]="false"
-                        [showSubtitle]="false"
-                        
-                    ></circle-progress>
-                
-                    
-                </div>
             
             </div>
-        <!-- </div> -->
-            
-        <!-- </div>  -->
-    <!-- </div> -->
+       
+        </div>
+
   </div>
   
   <app-separador></app-separador>

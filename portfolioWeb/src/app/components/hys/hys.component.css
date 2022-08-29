@@ -32,6 +32,7 @@ h1, button{
     color: #dc3545;
 }
 
+
 .card{
     text-align: center;
     vertical-align: middle;
@@ -152,6 +153,18 @@ hr{
     justify-content: center;
     position: relative;
 }
+.btn-delete, .btn-edit{
+    padding: 0;
+    margin: 2px;
+}
+
+.fa-solid, .fa-pen{
+    font-size: small;
+}
+.fa-solid, .fa-trash{
+    font-size: small;
+}
+
 
 @media (max-width: 576px){
 
@@ -162,5 +175,25 @@ hr{
     /* img{
         width: 50%;
     } */
+    .btn-delete, .btn-edit{
+        padding: 0;
+        margin: 2px;
+    }
+    
+    .fa-solid, .fa-pen{
+        font-size: xx-small;
+    }
+    .fa-solid, .fa-trash{
+        font-size: xx-small;
+    }
+    .btn-success{
+        font-size: xx-small;
+    }
+   
+    h1, button{
+       
+        font-size: calc(1.3rem + 0.1vw);
+    
+    }
 
 }
