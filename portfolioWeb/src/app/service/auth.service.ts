@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 import { LoginUsuario } from '../model/login-usuario';
 import { JwtDto } from '../model/jwt-dto';
+import { persona } from '../model/persona.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,9 @@ export class AuthService {
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
     return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
+  }
+  
+  public editar(id: number, persona: persona): Observable<any> {
+    return this.httpClient.post<JwtDto>(this.authURL + `editar/${id}`, persona);
   }
 }

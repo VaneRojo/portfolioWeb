@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAcercaDeComponent implements OnInit {
 
-  persona: persona = [];
+  persona: persona = null!;
 
   constructor(private sPersona: PersonaService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
