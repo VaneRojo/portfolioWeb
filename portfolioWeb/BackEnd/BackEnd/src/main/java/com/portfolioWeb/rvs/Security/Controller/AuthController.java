@@ -31,6 +31,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -103,16 +104,8 @@ public class AuthController {
      * @param bindingResult
      * @return
      */
-    public Persona editar(@Valid @PathVariable Long id, 
-            @RequestParam("nombre") String nuevoNombre,
-            @RequestParam("apellido") String nuevoApellido,
-            @RequestParam("telefono") String nuevoTelefono,
-            @RequestParam("mail") String nuevoMail,
-            @RequestParam("img_perfil") String nuevoImg_perfil,
-            @RequestParam("img_banner") String nuevoImg_banner,
-            @RequestParam("edad") int nuevoEdad,
-            @RequestParam("titulo") String nuevoTitulo,
-            @RequestParam("introduccion") String introduccion, BindingResult bindingResult){
+    @PutMapping("/personas/editar/{id}")
+    public Persona editar(@PathVariable("id") Long id, @RequestBody Persona persona){
         /*if(bindingResult.hasErrors()){
             return new ResponseEntity(new Mensaje("Campos mal puestos o email inválido"), HttpStatus.BAD_REQUEST);
         }*/
@@ -137,19 +130,19 @@ public class AuthController {
         usuarioService.save(usuario);
         
         return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);*/
-        Persona persona = personaService.findPersona(id);
-        persona.setNombre(nuevoNombre);
-        persona.setApellido(nuevoApellido);
-        persona.setTelefono(nuevoTelefono);
-        persona.setMail(nuevoMail);
-        persona.setImg_perfil(nuevoImg_perfil);
-        persona.setImg_banner(nuevoImg_banner);
-        persona.setEdad(nuevoEdad);
-        persona.setTitulo(nuevoTitulo);
-        persona.setIntroduccion(introduccion);
+        Persona per = personaService.findPersona(id);
+        per.setNombre(persona.getNombre());
+        per.setApellido(persona.getApellido());
+        per.setTelefono(persona.getTelefono());
+        per.setMail(persona.getMail());
+        per.setImg_perfil(persona.getImg_perfil());
+        per.setImg_banner(persona.getImg_banner());
+        per.setEdad(persona.getEdad());
+        per.setTitulo(persona.getTitulo());
+        per.setIntroduccion(persona.getIntroduccion());
         
-        personaService.savePersona(persona);
-        return persona;
+        personaService.savePersona(per);
+        return per;
     }
     
     @PostMapping("/login")
