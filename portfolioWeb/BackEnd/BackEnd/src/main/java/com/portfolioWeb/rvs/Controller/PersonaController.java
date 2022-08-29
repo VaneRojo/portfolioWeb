@@ -33,7 +33,7 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
     
-    @GetMapping("/detail/{id}")
+    @GetMapping("personas/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id") Long id){
         if(!ipersonaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe ese registro"), HttpStatus.BAD_REQUEST);
