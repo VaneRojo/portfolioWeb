@@ -39,7 +39,7 @@ export class EditAcercaDeComponent implements OnInit {
           alert("La información se editó con éxito");
 
       },err => {
-        console.log("Error: " + data);
+        console.log("Error: " + err);
         alert("Error al modificar información");
       }
     )
