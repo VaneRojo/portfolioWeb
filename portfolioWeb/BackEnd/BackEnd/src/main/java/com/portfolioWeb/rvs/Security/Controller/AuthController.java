@@ -42,7 +42,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -88,69 +88,6 @@ public class AuthController {
     }
     
 
-    /**
-     *
-     * @param id
-     * @param nuevoNombre
-     * @param nuevoApellido
-     * @param nuevoTelefono
-     * @param nuevoMail
-     * @param nuevoImg_perfil
-     * @param nuevoImg_banner
-     * @param nuevoEdad
-     * @param nuevoTitulo
-     * @param introduccion
-     * @param bindingResult
-     * @return
-     */
-    public Persona editar(@Valid @PathVariable Long id, 
-            @RequestParam("nombre") String nuevoNombre,
-            @RequestParam("apellido") String nuevoApellido,
-            @RequestParam("telefono") String nuevoTelefono,
-            @RequestParam("mail") String nuevoMail,
-            @RequestParam("img_perfil") String nuevoImg_perfil,
-            @RequestParam("img_banner") String nuevoImg_banner,
-            @RequestParam("edad") int nuevoEdad,
-            @RequestParam("titulo") String nuevoTitulo,
-            @RequestParam("introduccion") String introduccion, BindingResult bindingResult){
-        /*if(bindingResult.hasErrors()){
-            return new ResponseEntity(new Mensaje("Campos mal puestos o email inválido"), HttpStatus.BAD_REQUEST);
-        }*/
-        
-        /*if(usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario())){
-            return new ResponseEntity(new Mensaje("Ese nombre de usuario ya existe"), HttpStatus.BAD_REQUEST);
-        }
-        
-        if(usuarioService.existsByEmail(nuevoUsuario.getEmail())){
-            return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
-        }
-        
-        Usuario usuario = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(),
-            nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
-        
-        Set<Rol> roles = new HashSet<>();
-        roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
-        
-        if(nuevoUsuario.getRoles().contains("admin"))
-            roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
-        usuario.setRoles(roles);
-        usuarioService.save(usuario);
-        
-        return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);*/
-        Persona persona = personaService.findPersona(id);
-        persona.setNombre(nuevoNombre);
-        persona.setApellido(nuevoApellido);
-        persona.setTelefono(nuevoTelefono);
-        persona.setMail(nuevoMail);
-        persona.setImg_perfil(nuevoImg_perfil);
-        persona.setImg_banner(nuevoImg_banner);
-        persona.setEdad(nuevoEdad);
-        persona.setTitulo(nuevoTitulo);
-        persona.setIntroduccion(introduccion);
-        
-        personaService.savePersona(persona);
-        return persona;
-    }
     
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
