@@ -32,7 +32,7 @@ public class PersonaController {
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id") Long id){
         if(!ipersonaService.existsById(id)){
