@@ -1,1 +1,51 @@
-<p>edit-acerca-de works!</p>
+<div class="card">
+    <div class="row">
+        <div class="col-12"> 
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" placeholder="Nombre " required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido"> Apellido <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" placeholder="Apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="mail"> E-mail <span class="required">*</span></label>
+                    <input type="mail" class="form-control" id="mail" name="mail" [(ngModel)]="persona.mail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono"> Teléfono <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono" placeholder="Teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad"> Edad <span class="required">*</span></label>
+                    <input type="number" class="form-control" id="edad" name="edad" [(ngModel)]="persona.edad" placeholder="Edad" required>
+                </div>
+                <div class="form-group">    
+                    <label for="introduccion">Breve introducción <span class="required">*</span></label>
+                    <textarea type="text" class="form-control" id="introduccion" name="introduccion" [(ngModel)]="persona.introduccion" placeholder="Descripción" required></textarea>
+                </div>    
+
+                <div class="form-group">    
+                    <label for="img_perfil">URL imagen de perfil <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="persona.img_perfil" placeholder="URL imagen de perfil" required>
+                </div>               
+
+                <div class="form-group">
+                    <label for="img_banner">URL del Banner</label>
+                    <input type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="persona.img_banner" placeholder="URL del Banner" required>
+
+                </div>
+                
+                
+                <button class="btn btn-success float-right">
+                    Actualizar perfil
+                </button>
+                <button class="btn btn-info float-right"  routerLink="">
+                    Volver
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

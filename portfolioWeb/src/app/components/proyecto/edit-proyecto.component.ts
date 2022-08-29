@@ -19,7 +19,7 @@ export class EditProyectoComponent implements OnInit {
     this.sProyecto.detail(id).subscribe(
       data => {
         this.proyecto = data;
-    // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
+        // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
         // data.fechaInicioE.toString();
         // data.fechaInicioE.getDate();
 
@@ -27,8 +27,8 @@ export class EditProyectoComponent implements OnInit {
         alert("Error al modificar educación");
         this.router.navigate(['']);
       }
-      )
-    }
+    )
+  }    
     
     onUpdate(): void {
       const id = this.activatedRouter.snapshot.params['id'];
