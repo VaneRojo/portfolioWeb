@@ -19,12 +19,8 @@ export class EditProyectoComponent implements OnInit {
     this.sProyecto.detail(id).subscribe(
       data => {
         this.proyecto = data;
-        // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-        // data.fechaInicioE.toString();
-        // data.fechaInicioE.getDate();
-
       }, err => {
-        alert("Error al modificar educación");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
@@ -35,9 +31,9 @@ export class EditProyectoComponent implements OnInit {
     this.sProyecto.update(id, this.proyecto).subscribe(
         data => {
           this.router.navigate(['']);
-          alert("La educación se editó con éxito");
+          alert("El proyecto se editó con éxito");
       },err => {
-        alert("Error al modificar educación");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )

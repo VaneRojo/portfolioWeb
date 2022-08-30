@@ -22,26 +22,15 @@ export class NewSkillComponent implements OnInit {
 
   onCreate(): void {
 
-    
-    // if(this.logoEdu == ""){
-    //   this.logoEdu = "../../../assets/img/no-logo.png";
-    // }
-
-    // this.fechaInicioE = new Date(this.fechaInicioE.toISOString());
-    // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-    // this.fechaInicioE = this.fechaInicioE.toString();
-    // this.fechaInicioE = new Date(this.fechaInicioE.valueOf());
 
     const skill = new Skill(this.nombreS, this.porcentajeS, this.urlImagenS, this.mostrarImagenS);
     this.skillS.save(skill).subscribe(
       data => { 
         alert('Skill añadido');
-        // console.log(data);
         this.router.navigate(['']);
       },err =>{
         console.log(skill);
         alert("Falló " + err.message);
-        // this.router.navigate(['']);
       }
     )
   }

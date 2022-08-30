@@ -19,10 +19,6 @@ export class EditeducacionComponent implements OnInit {
     this.sEducacion.detail(id).subscribe(
       data => {
         this.edu = data;
-    // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-        // data.fechaInicioE.toString();
-        // data.fechaInicioE.getDate();
-
       }, err => {
         alert("Error al modificar educación");
         this.router.navigate(['']);

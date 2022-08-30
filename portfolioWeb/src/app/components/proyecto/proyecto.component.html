@@ -1,67 +1,58 @@
 <div class="card descripcion">
-  
+
   <div class="row">
+
     <div class="titulo">
-      <h1> Proyecto
-      </h1>
-        <button class="btn btn-success" routerLink="/nuevoP" *ngIf="isLogged">
-          <i class="fa-solid fa-plus"></i>
-        </button>
+      <h1> Proyecto </h1>
+      <button class="btn btn-success" routerLink="/nuevoP" *ngIf="isLogged">
+        <i class="fa-solid fa-plus"></i>
+      </button>
       <hr class="undarline">
     </div>
-    <!-- <div class="card-header experiencia">  -->
-    <!-- </div>
-    <div class="card-body"> -->
-      <!-- <div class="row"> -->
+
     <div class="card proyecto" *ngFor="let Proyecto of proyecto">
-      
+
       <div class="row">
 
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-          <!-- <div class="container"> -->
-            <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
-            <img src="{{Proyecto.logoP}}" class="img-fluid logo" >
-          <!-- </div> -->
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 container">
+
+          <img src="{{Proyecto.logoP}}" class="img-fluid logo">
+
         </div>
 
-        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-proyecto">
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 descripcion-proyecto">
 
           <h2>{{Proyecto.nombreP}}
 
             <span *ngIf="Proyecto.yearP != null">
-              <h3> - {{Proyecto.yearP | date : 'y' : 'es-AR'}} </h3> 
+              <h3> - {{Proyecto.yearP | date : 'y' : 'es-AR'}} </h3>
             </span>
-          </h2> 
-          <br>
-          
-          
-          <h6><a href="{{Proyecto.urlP}}" target="_blank"> Ir al Proyecto</a>
-          </h6>
+
+          </h2>
+
+          <h6><a href="{{Proyecto.urlP}}" target="_blank"> Ir al Proyecto <sup><i class="fa-solid fa-up-right-from-square"></i></sup></a></h6>
+
           <p *ngIf="Proyecto.descripcionP != null">{{Proyecto.descripcionP}}</p>
-          
-          
+
           <div class="row " *ngIf="isLogged">
-            <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-              <button class="btn btn-edit" routerLink="/editP/{{Proyecto.id}}">
+            <div class="col-3 col-offset-9 btn-edit-delete">
+              <button class="btn btn-edit float-right" routerLink="/editP/{{Proyecto.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
-              <button class="btn btn-delete" (click)="delete(Proyecto.id)">
+              <button class="btn btn-delete float-right" (click)="delete(Proyecto.id)">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>
           </div>
 
-
         </div>
 
-        
-
       </div>
-      
-    </div>
-    
 
-  </div> 
+    </div>
+
+  </div>
+  
 </div>
 
 <app-separador></app-separador>

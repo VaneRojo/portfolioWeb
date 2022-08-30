@@ -1,69 +1,51 @@
 <div class="card descripcion">
-    <!-- <div class="container-fluid"> -->
-        <!-- <div class="row"> -->
-            <div class="titulo">
-                <h1> Hard & Soft Skills
-                </h1>
-                <button class="btn btn-success" routerLink="/nuevaS" *ngIf="isLogged">
-                    <i class="fa-solid fa-plus"></i>
-                  </button>
-                <hr class="undarline">
-            </div>
-        
-        <!-- <div class="card educacion "> -->
-            <div class="row">
-                
-                <div class="col-4 col-sm-2 col-md-2 col-lg-2 container educacion" *ngFor="let Skill of skill">
+
+    <div class="row">
+
+        <div class="titulo float-right">
+            <h1> Hard & Soft Skills   </h1>
+            <button class="btn btn-success" routerLink="/nuevaS" *ngIf="isLogged">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <hr class="undarline">
+        </div>
+
+        <div class="row">
+
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 container hys" *ngFor="let Skill of skill">
+                <div class="">
                     <div class="">
-                        <div class="">
-                            <div class="row" *ngIf="isLogged">
-                                <div class="col" >
+                        <div class="row" *ngIf="isLogged">
+                            <div class="col">
                                 <button class="btn btn-edit btn-sm" routerLink="/editS/{{Skill.id}}">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
                                 <button class="btn btn-delete btn-sm" (click)="delete(Skill.id)">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
-                                </div>
                             </div>
                         </div>
-                        
-                        <div class="">
-
-                            <circle-progress
-                                [percent]="Skill.porcentajeS"
-                                [radius]="100"
-                                [title]= "Skill.nombreS"
-                                [outerStrokeWidth]="5"
-                                [innerStrokeWidth]="2"
-                                [titleFontWeight]="'650'"
-                                [outerStrokeColor]="'#c5a6dd'"
-                                [outerStrokeGradient]="true"
-                                outerStrokeGradientStopColor = #e2c0f2
-                                [innerStrokeColor]="'#e5e5e6'"
-                                [animation]="true"
-                                [animationDuration]="300"
-                                titleFontSize= 3em
-                                [imageSrc]="Skill.urlImagenS"
-                                [showImage]="Skill.mostrarImagenS"
-                                [imageWidth]="100"
-                                [imageHeight]="100"
-                                [responsive]="true"
-                                [showUnits]="false"
-                                [showSubtitle]="false"
-                                [titleColor]="'#cb39d5'"
-                                
-                            ></circle-progress>
-
-                        </div>
                     </div>
-            
+
+                    <div class="">
+
+                        <circle-progress [percent]="Skill.porcentajeS" [radius]="100" [title]="Skill.nombreS"
+                            [outerStrokeWidth]="5" [innerStrokeWidth]="2" [titleFontWeight]="'650'"
+                            [outerStrokeColor]="'#c5a6dd'" [outerStrokeGradient]="true"
+                            outerStrokeGradientStopColor=#e2c0f2 [innerStrokeColor]="'#e5e5e6'" [animation]="true"
+                            [animationDuration]="300" titleFontSize=3em [imageSrc]="Skill.urlImagenS"
+                            [showImage]="Skill.mostrarImagenS" [imageWidth]="100" [imageHeight]="100"
+                            [responsive]="true" [showUnits]="false" [showSubtitle]="false" [titleColor]="'#cb39d5'">
+                        </circle-progress>
+
+                    </div>
+                </div>
             </div>
-       
+
         </div>
 
-  </div>
-  
-  <app-separador></app-separador>
-  
+    </div>
 
+</div>
+
+<app-separador></app-separador>

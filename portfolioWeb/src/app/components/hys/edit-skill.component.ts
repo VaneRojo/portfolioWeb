@@ -18,12 +18,8 @@ export class EditSkillComponent implements OnInit {
     this.sSkill.detail(id).subscribe(
       data => {
         this.skill = data;
-        // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-        // data.fechaInicioE.toString();
-        // data.fechaInicioE.getDate();
-
       }, err => {
-        alert("Error al modificar experiencia");
+        alert("Error al modificar Skill");
         this.router.navigate(['']);
       }
       )
@@ -34,10 +30,9 @@ export class EditSkillComponent implements OnInit {
       this.sSkill.update(id, this.skill).subscribe(
         data => {
           this.router.navigate(['']);
-          alert("La experiencia se editó con éxito");
+          alert("La Skill se editó con éxito");
       },err => {
-        alert("Error al modificar experiencia");
-        // this.router.navigate(['']);
+        alert("Error al modificar Skill");
       }
     )
   }

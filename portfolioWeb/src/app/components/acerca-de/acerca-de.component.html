@@ -1,40 +1,36 @@
-  <app-banner></app-banner>
-  
-  
-  <div class="row">
-    <div class="card-titles">
-      <button class="btn btn-edit col-1 float-right" routerLink="/editInfo/{{persona.id}}" *ngIf="isLogged">
-        <i class="fa-solid fa-pen"></i>
-      </button>
+<app-banner></app-banner>
+
+
+<div class="row">
+  <div class="card-titles acercaDe-btnEdit">
+    <button class="btn btn-edit col-1 float-right" routerLink="/editInfo/{{persona.id}}" *ngIf="isLogged">
+      <i class="fa-solid fa-pen"></i>
+    </button>
+  </div>
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <div class="card descripcion">
+      <p id="nombre" class="nombre">{{persona.nombre}} {{persona.apellido}} </p>
+      <p id="titulo" class="titulo"> {{persona.titulo}} </p>
+      <div class="info-contacto">
+        <p id="cel" class=""><i class="fa-solid fa-phone"></i> {{persona.telefono}}</p>
+        <p id="mail" class=""><i class="fa-solid fa-envelope"></i> {{persona.mail}}</p>
+        <p id="edad" class=""><i class="fa-solid fa-user"></i> {{persona.edad}} años</p>
+      </div>
     </div>
-    <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 img-perfil-container"> -->
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="card descripcion">
-        <p id="nombre" class="nombre">{{persona.apellido}}, {{persona.nombre}} </p>
-        <p id="titulo" class="titulo"> {{persona.titulo}} </p>
-        <div class="info-contacto">
-          <p id="cel" class="">Cel.: {{persona.telefono}}</p>
-          <p id="mail" class="">Mail: {{persona.mail}}</p>
-          <p id="edad" class="">Edad: {{persona.edad}} años</p>
+  </div>
+  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 acercaDe">
+    <div class="card mat-card descripcion">
+      <div class="card-body">
+        <p>{{persona.introduccion}}</p>
+        <div>
+          <!-- Hacerlo dinámico -->
+          <img src="../../../assets/img/about-me.png" class="img-acercaDe">
+          <!-- *** -->
         </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 acercaDe">
-      <div class="card mat-card descripcion">
-        <!-- <div class="card-titles">
-          <h1>Acerca de mí</h1>
-        </div> -->
-        <div class="card-body">
-          <p>{{persona.introduccion}}</p>
-          <div >
-            <img src="../../../assets/img/about-me.png" class="img-acercaDe">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
- 
-  <app-separador></app-separador>
+  </div>
+</div>
 
-
-
+<app-separador></app-separador>

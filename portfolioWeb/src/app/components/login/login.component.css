@@ -3,21 +3,11 @@ section{
     height: 399px;
 }
 
-img{
-    /* margin: 10%;
-    height: 24em; */
-    height: 353px;
-    width: 736px;
-    border-radius: 11px;
-    /* box-shadow:  0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); */
-    /* backdrop-filter: blur(2px);  */
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
-}
+
 .card{
-    margin:7%;
+    margin:1% 7%;
     background: linear-gradient(270deg, rgba(0,0,0,0.3) 62%,rgba(0,0,0,1) 64%,rgba(0,0,0,4) 100%);
-    height: 354px;
+    /* height: 354px; */
     border-radius: 11px;
     border: none;
     /* background-image: url( "../../../assets/img/fondo-estrellado.jpg"); */
@@ -26,5 +16,24 @@ img{
 
 .circle{
     display: flex;
-    width: 100%;
+    width: auto;
+}
+
+@media (min-width: 576px){
+    img{
+ 
+        /* height: 353px; */
+        /* max-width: auto; */
+        border-radius: 11px;
+        width: -webkit-fill-available;
+    
+    }
+}
+@media (max-width: 576px){
+   .form{
+        margin-top: -68%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: -webkit-fill-available;
+   }
 }

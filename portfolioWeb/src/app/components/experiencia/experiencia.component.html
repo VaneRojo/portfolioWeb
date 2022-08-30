@@ -1,6 +1,7 @@
 <div class="card descripcion">
   
   <div class="row">
+
     <div class="titulo">
       <h1> Experiencia Laboral
       </h1>
@@ -9,29 +10,22 @@
         </button>
       <hr class="undarline">
     </div>
-    <!-- <div class="card-header experiencia">  -->
-    <!-- </div>
-    <div class="card-body"> -->
-      <!-- <div class="row"> -->
+   
     <div class="card empleo" *ngFor="let Experiencia of expe">
       
       <div class="row">
 
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-          <!-- <div class="container"> -->
-            <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
             <img src="{{Experiencia.logoE}}" class="img-fluid logo" >
-          <!-- </div> -->
-          
         </div>
+
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-empleo">
-          
+
           <span *ngIf="Experiencia.fechaFinE != null">
             <h2>{{Experiencia.nombreE}}</h2> - 
             <h3> {{Experiencia.fechaInicioE | date : 'MMMM y' : 'es-AR'}}  - {{Experiencia.fechaFinE | date : 'MMMM y'  : 'es-AR' }} </h3>
           </span>
-          <!-- <p> DatePipe:{{Experiencia.fechaInicioE.toISOString() | date}}</p> -->
-  <!-- <p>DatePipe:{{todayString | date}}</p> -->
+         
           <span *ngIf="Experiencia.fechaFinE 
           == null">
             <h2>{{Experiencia.nombreE}}</h2> - 
@@ -43,24 +37,24 @@
           
           
           <div class="row" *ngIf="isLogged">
-            <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-              <button class="btn btn-edit" routerLink="/editExp/{{Experiencia.id}}">
+            <div class="col-offset-9 col-sm-3 btn-edit-delete">
+              <button class="btn btn-edit float-right" routerLink="/editExp/{{Experiencia.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
-              <button class="btn btn-delete" (click)="delete(Experiencia.id)">
+              <button class="btn btn-delete float-right" (click)="delete(Experiencia.id)">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>
           </div>
 
-
         </div>
+
       </div>
       
     </div>
     
-
   </div> 
+  
 </div>
 
 <app-separador></app-separador>

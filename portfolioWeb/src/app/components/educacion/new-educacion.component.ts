@@ -29,24 +29,20 @@ export class NewEducacionComponent implements OnInit {
 
     
     if(this.logoEdu == ""){
-      this.logoEdu = "../../../assets/img/no-logo.png";
+      this.logoEdu = "../../../assets/img/estudio.png";
     }
 
-    // this.fechaInicioE = new Date(this.fechaInicioE.toISOString());
-    // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-    // this.fechaInicioE = this.fechaInicioE.toString();
-    // this.fechaInicioE = new Date(this.fechaInicioE.valueOf());
 
     const expe = new Educacion(this.nombreInsti, this.tituloEdu, this.fechaInicioEdu, this.fechaFinEdu, this.descripcionEdu, this.nivelEdu, this.logoEdu);
     this.educacionS.save(expe).subscribe(
       data => { 
-        alert('Experiencia añadida');
-        // console.log(data);
+        alert('Educación añadida');
+        
         this.router.navigate(['']);
       },err =>{
         console.log(expe);
         alert("Falló " + err.message);
-        // this.router.navigate(['']);
+        
       }
     )
   }

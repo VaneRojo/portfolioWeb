@@ -1,27 +1,24 @@
 <div class="card descripcion">
   
   <div class="row">
+
     <div class="titulo">
-      <h1> Educacion
+      <h1> Educacion 
       </h1>
         <button class="btn btn-success" routerLink="/nuevaEdu" *ngIf="isLogged">
           <i class="fa-solid fa-plus"></i>
         </button>
       <hr class="undarline">
     </div>
-    <!-- <div class="card-header experiencia">  -->
-    <!-- </div>
-    <div class="card-body"> -->
-      <!-- <div class="row"> -->
+    
     <div class="card educacion" *ngFor="let Educacion of educacion">
       
       <div class="row">
 
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 container">
-          <!-- <div class="container"> -->
-            <!-- <img src="../../../assets/img/logo.png" class="img-fluid logo" > -->
+         
             <img src="{{Educacion.logoEdu}}" class="img-fluid logo" >
-          <!-- </div> -->
+          
         </div>
 
         <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 descripcion-educacion">
@@ -38,8 +35,7 @@
             </h4> 
 
           </span>
-          <!-- <p> DatePipe:{{Educacion.fechaInicioEdu.toISOString() | date}}</p> -->
-          <!-- <p>DatePipe:{{todayString | date}}</p> -->
+          
           <span *ngIf="Educacion.fechaFinEdu == null">
              
             <h4> {{Educacion.fechaInicioEdu | date:'MMMM y' : 'es-AR'}}  - Actualidad  
@@ -52,11 +48,11 @@
           
           
           <div class="row " *ngIf="isLogged">
-            <div class="col-2 col-offset-10 " style="margin-inline-start: auto;">
-              <button class="btn btn-edit" routerLink="/editEdu/{{Educacion.id}}">
+            <div class="col-3 col-offset-9  btn-edit-delete">
+              <button class="btn btn-edit float-right" routerLink="/editEdu/{{Educacion.id}}">
                 <i class="fa-solid fa-pen"></i>
               </button>
-              <button class="btn btn-delete" (click)="delete(Educacion.id)">
+              <button class="btn btn-delete float-right" (click)="delete(Educacion.id)">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>
@@ -65,14 +61,12 @@
 
         </div>
 
-        
-
       </div>
       
     </div>
-    
 
   </div> 
+
 </div>
 
 <app-separador></app-separador>

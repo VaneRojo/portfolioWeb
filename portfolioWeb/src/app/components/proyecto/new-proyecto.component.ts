@@ -25,7 +25,7 @@ export class NewProyectoComponent implements OnInit {
 
     
     if(this.logoP == null){
-      this.logoP = "../../../assets/img/no-logo.png";
+      this.logoP = "../../../assets/img/project1.png";
     }
 
     // this.fechaInicioE = new Date(this.fechaInicioE.toISOString());
@@ -37,7 +37,6 @@ export class NewProyectoComponent implements OnInit {
     this.proyectoS.save(expe).subscribe(
       data => { 
         alert('Proyecto añadido');
-        // console.log(data);
         this.router.navigate(['']);
       },err =>{
         console.log(expe);

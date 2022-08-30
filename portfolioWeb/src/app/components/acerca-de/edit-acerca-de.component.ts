@@ -19,12 +19,8 @@ export class EditAcercaDeComponent implements OnInit {
     this.sPersona.detail(id).subscribe(
       data => {
         this.per = data;
-        // this.fechaInicioE = this.fechaInicioE.toJSON().slice(0, 10);
-        // data.fechaInicioE.toString();
-        // data.fechaInicioE.getDate();
-
       }, err => {
-        alert("nginitError al modificar información");
+        alert("Error al modificar información");
         this.router.navigate(['']);
       }
     )
