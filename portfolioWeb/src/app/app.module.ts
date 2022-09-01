@@ -29,9 +29,6 @@ import { DatePipe } from '@angular/common';
 import localeEs from '@angular/common/locales/es-AR';
 import { registerLocaleData } from '@angular/common';
 
-
-
-
 import { EditeducacionComponent } from './components/educacion/edit-educacion.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';

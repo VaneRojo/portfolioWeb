@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { DatePipe } from '@angular/common';
+import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-edit-proyecto',
   templateUrl: './edit-proyecto.component.html',
@@ -38,5 +39,10 @@ export class EditProyectoComponent implements OnInit {
       }
     )
   }
+
+  year = new FormControl('', Validators.compose([
+    Validators.required,
+    Validators.pattern(/^[0-9]{4}$/)
+  ]));
 
 }

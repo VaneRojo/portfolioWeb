@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
@@ -45,5 +46,10 @@ export class NewProyectoComponent implements OnInit {
       }
     )
   }
+
+  year = new FormControl('', Validators.compose([
+    Validators.required,
+    Validators.pattern(/^[0-9]{4}$/)
+  ]));
 
 }

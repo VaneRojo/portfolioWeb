@@ -12,7 +12,9 @@
 
 }
 
-
+.msj-error{
+    color: red;
+}
 
 html{
     font-family: var(--font) !important;

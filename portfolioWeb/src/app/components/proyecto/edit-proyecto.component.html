@@ -5,20 +5,31 @@
                 <div class="form-group">
                     <label for="nombreP">Nombre del Proyecto <span class="required">*</span></label>
                     <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" placeholder="Nombre del Proyecto" required>
+                    
+                    <p *ngIf="proyecto.nombreP.length > 255 " class="msj-error">Máximo 255 caracteres</p>
+
+
                 </div>
                 <div class="form-group">    
                     <label for="descripcionP">Descripción <span class="required">*</span></label>
                     <textarea type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" placeholder="Descripción" required></textarea>
+
+
                 </div>    
 
                 <div class="form-group">    
                     <label for="urlP">URL del Proyecto <span class="required">*</span></label>
                     <input type="text" class="form-control" id="urlP" name="urlP" [(ngModel)]="proyecto.urlP" placeholder="URL del Proyecto" required>
+
+                    <p *ngIf="proyecto.urlP.length > 255 " class="msj-error">La URL debe tener máximo 255 caracteres</p>
+
                 </div> 
 
                 <div class="form-group">    
                     <label for="yearP">Año del proyecto </label>
-                    <input type="text" class="form-control" id="yearP" name="yearP" [(ngModel)]="proyecto.yearP" placeholder="Año del proyecto" required>
+                    <input type="text" class="form-control" id="yearP" name="yearP" [(ngModel)]="proyecto.yearP" placeholder="Año del proyecto" required [formControl]="year">
+
+                    <p *ngIf="year.errors" class="msj-error">El Año solo puede contener números y ser 4 caracteres máximo</p>
                 </div> 
                 
 
@@ -26,6 +37,7 @@
                     <label for="logoP">URL Logo</label>
                     <input type="text" class="form-control" id="logoP" name="logoP" [(ngModel)]="proyecto.logoP" placeholder="URL del logo" required>
 
+                    <p *ngIf="proyecto.logoP.length > 255 " class="msj-error">La URL debe tener máximo 255 caracteres</p>
                 </div>
                 
                 

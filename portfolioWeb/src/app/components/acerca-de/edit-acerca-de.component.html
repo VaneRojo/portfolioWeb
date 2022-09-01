@@ -4,27 +4,41 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
                 <div class="form-group">
                     <label for="nombre">Nombre <span class="required">*</span></label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="per.nombre" placeholder="Nombre" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="per.nombre" placeholder="Nombre" required [formControl]="nombre">
+                    <p *ngIf="per.nombre.length > 40 " class="msj-error">El nombre debe tener máximo 50 caracteres</p>
+                    <p *ngIf="nombre.errors" class="msj-error">El nombre solo puede contener letras</p>
                 </div>
                 <div class="form-group">
                     <label for="apellido"> Apellido <span class="required">*</span></label>
-                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="per.apellido" placeholder="Apellido" required>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="per.apellido" placeholder="Apellido" required [formControl]="apellido">
+                    <p *ngIf="per.apellido.length > 40 " class="msj-error">El apellido debe tener máximo 50 caracteres</p>
+                    <p *ngIf="apellido.errors" class="msj-error">El apellido solo puede contener letras</p>
+
                 </div>
                 <div class="form-group">
                     <label for="titulo"> Titulo <span class="required">*</span></label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="per.titulo" placeholder="Titulo" required>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="per.titulo" placeholder="Titulo" required [formControl]="titulo">
+                    <p *ngIf="per.titulo.length > 60 " class="msj-error">El Título debe tener máximo 50 caracteres</p>
+                    <p *ngIf="titulo.errors" class="msj-error">El Título solo puede contener letras</p>
+
                 </div>
                 <div class="form-group">
                     <label for="mail"> E-mail <span class="required">*</span></label>
-                    <input type="mail" class="form-control" id="mail" name="mail" [(ngModel)]="per.mail" placeholder="Email" required>
+                    <input type="mail" class="form-control" id="mail" name="mail" [(ngModel)]="per.mail" placeholder="Email" required [formControl]="email">
+                    <p *ngIf="per.mail.length > 100 " class="msj-error">El E-Mail debe tener máximo 100 caracteres</p>
+                    <p *ngIf="email.errors" class="msj-error">El formato del E-mail ingresado es incorrecto</p>
                 </div>
                 <div class="form-group">
                     <label for="telefono"> Teléfono <span class="required">*</span></label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="per.telefono" placeholder="Teléfono" required>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="per.telefono" placeholder="Teléfono" required [formControl]="telefono" >
+                    <p *ngIf="per.telefono.length > 13 " class="msj-error">El telefono debe tener máximo 13 caracteres</p>
+                    <p *ngIf="telefono.errors" class="msj-error">El teléfono debe contener solo números. Se acepta - </p>
+                    
                 </div>
                 <div class="form-group">
                     <label for="edad"> Edad <span class="required">*</span></label>
                     <input type="number" class="form-control" id="edad" name="edad" [(ngModel)]="per.edad" placeholder="Edad" required>
+                    <p *ngIf="per.edad > 100 " class="msj-error">La edad no puede ser mayor de 100</p>
                 </div>
                 <div class="form-group">    
                     <label for="introduccion">Breve introducción <span class="required">*</span></label>
@@ -34,17 +48,19 @@
                 <div class="form-group">    
                     <label for="img_perfil">URL imagen de perfil <span class="required">*</span></label>
                     <input type="text" class="form-control" id="img_perfil" name="img_perfil" [(ngModel)]="per.img_perfil" placeholder="URL imagen de perfil" required>
+                    <p *ngIf="per.img_perfil.length > 255 " class="msj-error">La URL debe tener máximo 255 caracteres</p>
+                    
                 </div>               
-
+                
                 <div class="form-group">
                     <label for="img_banner">URL del Banner</label>
                     <input type="text" class="form-control" id="img_banner" name="img_banner" [(ngModel)]="per.img_banner" placeholder="URL del Banner" required>
-
+                    <p *ngIf="per.img_banner.length > 255 " class="msj-error">La URL debe tener máximo 255 caracteres</p>
                 </div>
                 
                 
-                <button class="btn btn-success float-right">
-                    Actualizar perfil
+                <button class="btn btn-warning float-right">
+                    Actualizar
                 </button>
                 <button class="btn btn-info float-right"  routerLink="">
                     Volver

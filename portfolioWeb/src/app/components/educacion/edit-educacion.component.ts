@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { Validators } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-editeducacion',
@@ -39,5 +41,19 @@ export class EditeducacionComponent implements OnInit {
     )
   }
 
+
+  nombreInsti = new FormControl('', Validators.compose([
+    Validators.required,
+    Validators.pattern(/[0-9A-Za-záéíóúÁÉÍÓÚÑñ.+°\s]$/)
+  ]));
+  nivelEdu = new FormControl('', Validators.compose([
+    Validators.required,
+    Validators.pattern(/[A-Za-záéíóúÁÉÍÓÚÑñ.\s]$/)
+  ]));
+  titulo = new FormControl('', Validators.compose([
+    Validators.required,
+    Validators.pattern(/[A-Za-záéíóúÁÉÍÓÚÑñ.\s]$/)
+  ]));
+  
 
 }

@@ -5,10 +5,15 @@
                 <div class="form-group">
                     <label for="nombreE">Nombre de la empresa <span class="required">*</span></label>
                     <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" placeholder="Nombre de la empresa" required>
+
+                    <p *ngIf="nombreE.length > 255  && nombreE.length > 0" class="msj-error">Máximo 255 caracteres</p>
+
                 </div>
                 <div class="form-group">    
                     <label for="descripcionE">Descripción de tarea <span class="required">*</span></label>
                     <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" placeholder="Descripción del puesto" required>
+
+                    <p *ngIf="descripcionE.length > 255  && descripcionE.length > 0" class="msj-error">Máximo 255 caracteres</p>
                 </div>    
 
                 <div class="form-group">
@@ -33,6 +38,8 @@
                 <div class="form-group">
                     <label for="logoE">URL Logo</label>
                     <input type="text" class="form-control" id="logoE" name="logoE" [(ngModel)]="logoE" placeholder="URL del logo" required>
+
+                    <p *ngIf="logoE.length > 255  && logoE.length > 0" class="msj-error">Máximo 255 caracteres</p>
 
                 </div>
                 
