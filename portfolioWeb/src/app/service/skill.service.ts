@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  URL = 'http://localhost:8080/skill/';
+  URL = 'https://back-end-pw.herokuapp.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -33,4 +33,3 @@ export class SkillService {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }
- 

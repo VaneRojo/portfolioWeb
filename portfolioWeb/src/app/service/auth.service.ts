@@ -10,7 +10,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://back-end-pw.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -21,7 +21,7 @@ export class AuthService {
   public login(loginUsuario: LoginUsuario): Observable<JwtDto> {
     return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
   }
-  
+
   public editar(id: number, persona: persona): Observable<any> {
     return this.httpClient.post<JwtDto>(this.authURL + `editar/${id}`, persona);
   }
